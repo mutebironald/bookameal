@@ -1,0 +1,13 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+.meals-container{
+  width:50%;
+}
+
+
+.meal-data{
+  padding:10px;
+  padding-left:5%;
+  
+}
+
