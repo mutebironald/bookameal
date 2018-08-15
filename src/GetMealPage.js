@@ -1,56 +1,33 @@
-// import React from './react';
-// // import { ReactRouter} from 'react';
-// // import { Router } from 'react-router';
-// // import history from './history'
-// // import { Provider } from 'react-redux';
-// // import thunk from 'redux-thunk'
+import React, { Component  } from "react";
+import GetMeals from "./GetMeals";
+class GetMealPage extends Component{
 
+    componentWillMount(){
+        console.log(this.props)
+    }
+    render(){
+        return(
+            <div className="card mt-2">
+                <div className="row text-muted">
+                    <div className="col-md-5 meal-data">
+                    <strong>Meal:</strong>{this.props.item.name}
+                    </div>
+                    <div className="col-md-4 meal-data">
+                    <strong>Price:</strong>{this.props.item.price}
+                    </div>
+                    <div className="col-md-3 p-2">
+                    <a href="/updateMeal" id = {this.props.item.id} className="btn btn-info btn-sm" role="button" aria-pressed="true">Edit meal</a>
+                    <br/><br/>
+                    <button
+                        className="btn btn-danger">
+                        delete
+                    </button>
+                    </div>
+                </div>
+            </div>
 
-// var { Router, Route, browserHistory } = ReactRouter
-// class First extends React.Component{
-//   constructor(props){
-//     super(props);
-//     this.sendValue = this.sendValue.bind(this);    
-//     this.setValue = this.setValue.bind(this);
-//     this.state = {
-//       userID: "@nageshwar_uidev"
-//     };
-//   }
-//   setValue(e){
-//     this.setState({
-//       userID: e.target.value
-//     });
-//   }
-//   sendValue(){
-//     //console.log(this.state.userID);
-//     browserHistory.push('/second/'+this.state.userID); 
-//   }
-//   render(){
-//     return (
-//       <div>
-//         <input type='text' value={this.state.userID} onChange={this.setValue} />
-//         <button onClick={this.sendValue}>send</button>
-//       </div>
-//     )
-//   }
-// }
+        )
+    }
+}
 
-// class Second extends React.Component{
-//   render(){
-//     let { userID } = this.props.params;
-//     return <div>The userID from first component is {userID} <a href="#" onClick={()=>browserHistory.push('/')}>back</a></div>
-//   }
-// }
-// class Main extends React.Component{
-
-//   render(){
-//     return (
-//      <Router history={browserHistory}>
-//           <Route path='/' component={First}></Route>
-//           <Route path='/second/:userID' component={Second}></Route>
-//     </Router>)
-//    }
-// }
-// React.render( <Main />,document.getElementById('app'));
-// browserHistory.push('/')
-
+export default GetMealPage;
