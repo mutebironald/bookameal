@@ -1,43 +1,19 @@
 import axios from "axios";
 
-export const updateMealRequest = (id, data) => dispatch => {
-    // console.log("Test Action")
-    // console.log(data)
-    let payload = {
-        method: "PUT",
-        body: data,
-        headers: {
-            "Content-Type": "application/json",
+export function updateMealRequest(id, data){
+    return function(dispatch){
 
-        }
-    }
-
-    axios.put("http://127.0.0.1:5000/api/v1/meals/" + id,payload['body'])
-    .then((response)=>{
+    return axios.put("/api/v1/meals/" + id, data)
+    .then(response =>{
         console.log(response)
-        console.log(payload['body'])
-        
-        // {
-        //     type: "UPDATE_MEAL",
-        //     payload: response.data
-        // }
+        dispatch({ type: "UPDATE_MEAL", payload: data, id});
+        return {updatedMeal: true, message: "You have successfully updated the meal"};
     })
-    .catch((error)=>{
+    .catch(error =>{
         console.log(error.response.data)
+        return {updatedMeal: false, message: "Wrong name or price"};
         
     })
+}
 
-    
-
-
-
-    // fetch(`https://bookameal-.herokuapp.com/api/v1/meals/1`, payload)
-    // .then(response => response.json())
-    // .then(data => dispatch(
-    //     {
-    //         type: "UPDATE_MEAL",
-    //         payload: data
-    //     }
-    // ))
-    // .catch(error=>error)
 }
