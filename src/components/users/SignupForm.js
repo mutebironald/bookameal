@@ -1,80 +1,179 @@
 import React from 'react';
-// import axios from 'axios';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { userSignupRequest } from '../../actions/userSignupRequest'
+
+import { FormErrors } from '../../FormErrors'
+import '../.././App.css'
+import '../.././index.css'
+
+import Notifications, {notify} from 'react-notify-toast';
+import toastr from 'toastr';
+
+
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,NavLink,
+  } from 'reactstrap';
+
+
+
+    const selectedStyle = {
+        backgroundColor: "white",
+        color: "slategasy"
+      }
 
 class SignupForm extends React.Component {
     constructor(props){
     super(props);
     this.state = {
         email:'',
-        password:''
+        password:'',
+        is_admin: '',
+        formErrors: {email: '', password: ''},
+        emailValid: false,
+        passwordValid: false,
+        formValid: false
         }
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onChange(e) {
-        this.setState({ [e.target.name]: e.target.value});
-        console.log(e.target.name)
-        console.log(e.target.value)
+    onChange(event) {
+        const name = event.target.name;
+        const value = event.target.value;
+        this.setState({[name]: value}, 
+            () => { this.validateField(name, value) });
     }
 
-    onSubmit(e){
-        e.preventDefault();
-        console.log("=====")
-        console.log(this.state);
+    componentDidMount(){
+        let green = { background: 'green', text: "white" };
+        notify.show("Sign Up", "custom", 1000, green)
+
+    }
+
+    validateField(fieldName, value) {
+        let fieldValidationErrors = this.state.formErrors;
+        let emailValid = this.state.emailValid;
+        let passwordValid = this.state.passwordValid;
+      
+        switch(fieldName) {
+          case 'email':
+            emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+            fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+            break;
+          case 'password':
+            passwordValid = value.length >= 6;
+            fieldValidationErrors.password = passwordValid ? '': ' is too short';
+            
+            break;
+          default:
+            break;
+        }
+        this.setState({formErrors: fieldValidationErrors,
+                        emailValid: emailValid,
+                        passwordValid: passwordValid
+                      }, this.validateForm);
+      }
+      
+      validateForm() {
+        this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+      }
+
+      errorClass(error) {
+        return(error.length === 0 ? '' : 'has-error');
+     }
+
+    onSubmit(event){
+        event.preventDefault();
         console.log(JSON.stringify(this.state));
-        // axios.post('/api/users', {user: this.state}); 
-        this.props.userSignupRequest(JSON.stringify(this.state));
-        console.log("You Clicked Me")
+        this.props.userSignupRequest(this.state)
+        .then(response => {
+            if(response.signedUp){
+                toastr.success(response.message)
+                this.props.history.push("/login");
+            }
+            else{
+                toastr.error(response.message)
+            }
+        })
     }
     render(){
         return (
-            <form onSubmit={this.onSubmit} className="form-2">
-                <h1>Welcome to Bookameal</h1>
+            
+            <div>
 
-                <div className="form-group">
-                    <label className="control-label">Email</label>
+            <Navbar color="success" light expand="md">
+              <NavbarBrand href="/">Book-A-Meal | Home </NavbarBrand>
+              <NavbarToggler onClick={this.toggle}/>
+              <Collapse isOpen={this.state.isOpen} navbar>
+                  <Nav className="ml-auto" navbar>
+                    <NavLink href='/signup' activeStyle={selectedStyle}>Signup</NavLink>
+                    <NavLink href='/login' activeStyle={selectedStyle}>login</NavLink>
+                  </Nav>      
+              </Collapse>
+            </Navbar>
+
+            
+
+            <div class="wrapper">
+
+
+            <form onSubmit={this.onSubmit} class="form-signin">
+            <Notifications/>
+                <h1 class="text-center">Register</h1>
+                <div className="panel panel-default">
+                <FormErrors formErrors={this.state.formErrors} />
+                </div>
+
+                <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+                    <label className="control-label"><strong>Email</strong></label>
                     <input
                         value={this.state.email}
                         onChange={this.onChange}
-                        type="text"
+                        type="email"
                         name="email"
                         className="form-control"
+                        placeholder="Email"
                     />
                 </div>
 
                 <div className="form-group">
-                    <label className="control-label">is_admin</label>
-                    <input
-                        value={this.state.is_admin}
-                        onChange={this.onChange}
-                        type="text"
-                        name="is_admin"
-                        className="form-control"
-                    />
-                </div>
-
-                <div className="form-group">
-                    <label className="control-label">Password</label>
+                    <label className="control-label"><strong>Password</strong></label>
                     <input
                         value={this.state.password}
                         onChange={this.onChange}
-                        type="text"
+                        type="password"
                         name="password"
                         className="form-control"
+                        minLength="6"
+                        required
                     />
                 </div>
 
+                <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+                    <label className="control-label"><strong>Admin</strong></label><br/><br/>
+                     <fieldset id="is_admin" onChange={this.onChange}>&emsp;
+                        <label><strong>True</strong></label>&emsp;
+                            <input type="checkbox" value="True" className="radio" name="is_admin" />&emsp;
+                    </fieldset>
+                </div>
+
                 <div className="form-group">
-                    <button className="btn btn-primary btn-lg">
-                        Sign up
+                    <button className="btn btn-primary btn-success" disabled={!this.state.formValid}>
+                        Signup
                     </button>
                 </div>
 
             </form>
+
+
+            </div>
+            </div>
+            
         );
     }
 }
