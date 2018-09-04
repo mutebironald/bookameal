@@ -1,5 +1,81 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+  /* background-color: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),red !important; */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('./images/vegmeals.jpg') 
 }
+
+/* Animations-- reactCSSTransitionGroup */
+.homeTransition-appear{
+  opacity: 0;
+}
+ 
+.homeTransition-appear.homeTransition-appear-active{
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+
+/* modals styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.205);
+}
+
+.modal-main {
+  position:fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+h5{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.add{
+  float: left;
+}
+
+.center {
+  margin: 0 auto !important;
+}
+
+.wrapper{
+  margin-top: 80px; 
+  margin-bottom: 80px;
+  
+}
+
+
+.form-signin{
+  max-width:380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0. 0, 0, 0.1);
+}
+
+
