@@ -9,6 +9,32 @@ import '../.././index.css'
 import Notifications, {notify} from 'react-notify-toast';
 import toastr from 'toastr';
 
+import { Badge, Button, Col,
+    Modal, ModalHeader, ModalBody,
+     ModalFooter , Form, FormGroup,
+      Label, Input} from 'reactstrap'
+
+import {
+        Collapse,
+        Navbar,
+        NavbarToggler,
+        NavbarBrand,
+        Nav,
+        NavItem,
+        NavLink,
+        NavDropdown,
+        DropdownMenu,
+        DropdownItem,
+        UncontrolledDropdown,
+        DropdownToggle,
+        } from 'reactstrap';
+        
+
+const selectedStyle = {
+    backgroundColor: "white",
+    color: "slategasy"
+}
+
 class AdminLoginForm extends React.Component {
     constructor(props){
         super(props);
@@ -25,7 +51,7 @@ class AdminLoginForm extends React.Component {
     componentDidMount(){
         console.log(this.props)
         let green = { background: 'green', text: "white" };
-        notify.show("login", "custom", 3000, green)
+        notify.show("login", "custom", 1000, green)
     }
 
     componentWillMount(){
@@ -65,8 +91,19 @@ class AdminLoginForm extends React.Component {
     render(){
         return(
             <div>
+                <Navbar color="success" light expand="md">
+                    <NavbarBrand href="/">Book-A-Meal | Home </NavbarBrand>
+                    <NavbarToggler onClick={this.toggle}/>
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <Nav className="ml-auto" navbar>
+                        {/* <NavLink href='/getMeals' activeStyle={selectedStyle}>Meals</NavLink>
+                        <NavLink href='/adminMenu' activeStyle={selectedStyle}>Menu</NavLink>            */}
+                        <NavLink href='/adminregister' activeStyle={selectedStyle}>Signup</NavLink>
+                        <NavLink href='/adminlogin' activeStyle={selectedStyle}>Login</NavLink>
+                        </Nav>      
+                    </Collapse>
+                    </Navbar>
                 <div class="wrapper">
-
 
                     <form onSubmit={this.onSubmit} class="form-signin">
                     <Notifications/>
