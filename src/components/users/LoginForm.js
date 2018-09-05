@@ -30,6 +30,7 @@ class LoginForm extends React.Component {
     constructor(props, context){
     super(props);
     this.state = {
+        username:'',
         email:'',
         password:'',
         formErrors: {email: '', password: ''},
@@ -44,7 +45,7 @@ class LoginForm extends React.Component {
     componentDidMount() {
         console.log(this.props)
         let green = { background: 'green', text: "white" };
-        notify.show("login", "custom", 3000, green)
+        notify.show("login", "custom", 1000, green)
     }
 
     componentWillMount(){
@@ -123,6 +124,7 @@ class LoginForm extends React.Component {
             }
         });
         this.setState({
+            username: '',
             email:'',
             password:'',
             formErrors: {email: '', password: ''},
@@ -154,10 +156,22 @@ class LoginForm extends React.Component {
             <Notifications/>
                 <h6 class="text-center"><strong>Login</strong></h6>
                 <div className="panel panel-default">
-                <FormErrors formErrors={this.state.formErrors}  />
+                {/* <FormErrors formErrors={this.state.formErrors}  /> */}
                 </div>
 
-                <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+                <div className="form-group">
+                    <label className="control-label"><strong>Username</strong></label>
+                    <input
+                        value={this.state.username}
+                        onChange={this.onChange}
+                        type="text"
+                        name="username"
+                        className="form-control"
+                        placeholder="Username"
+                    />
+                </div>
+
+                <div className="form-group">
                     <label className="control-label"><strong>Email</strong></label>
                     <input
                         value={this.state.email}
