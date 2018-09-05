@@ -10,7 +10,8 @@ class CreateMenu extends React.Component {
     constructor(props){
     super(props);
     this.state = {
-        meal_id :''
+        meal_id :'',
+        day: ''
         }
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -33,7 +34,7 @@ class CreateMenu extends React.Component {
             console.log(this.state);
             this.props.addMenuRequest((this.state));
             console.log(this.state)
-            this.setState({meal_id:''})
+            this.setState({meal_id:'', day: ''})
         }
     }
     render(){
@@ -49,6 +50,18 @@ class CreateMenu extends React.Component {
                         name="meal_id"
                         className="form-control"
                     />
+                </div>
+
+                <div className="form-group">
+                    <label className="control-label">Day</label>
+                    <input
+                        value={this.state.day}
+                        onChange={this.onChange}
+                        type="text"
+                        name="day"
+                        className="form-control"
+                    />
+                    
                 </div>
 
                 <div className="form-group">
