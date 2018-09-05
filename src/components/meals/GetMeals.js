@@ -169,7 +169,7 @@ class GetMeals extends Component{
                 <NavLink href='/getMeals' activeStyle={selectedStyle}>Meals</NavLink>
                 <NavLink href='/adminMenu' activeStyle={selectedStyle}>Menu</NavLink>           
                 <NavLink href='/adminOrders' activeStyle={selectedStyle}>Orders</NavLink>
-                <NavLink href='/login' activeStyle={selectedStyle}>Logout</NavLink>
+                <NavLink href='/adminlogin' activeStyle={selectedStyle}>Logout</NavLink>
                 </Nav>      
               </Collapse>
             </Navbar>
