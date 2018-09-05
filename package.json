@@ -9,6 +9,7 @@
     "bootstrap-vertical-tabs": "^1.2.2",
     "emotion": "^9.2.8",
     "emotion-theming": "^9.2.6",
+    "enzyme": "^3.5.1",
     "jslint": "^0.12.0",
     "mineral-ui": "^0.42.0",
     "prop-types": "^15.6.2",
@@ -29,13 +30,16 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-spring": "^5.6.9",
+    "react-test-renderer": "^16.4.2",
     "react-theme-provider": "^0.1.3",
     "react-transition-group": "^2.4.0",
     "reactstrap": "^6.4.0",
     "rebass": "^2.0.0-10",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "toastr": "^2.1.4"
+    "toastr": "^2.1.4",
+    "yarn": "^1.9.4",
+    "yarn-install": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +47,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "jest": "^23.5.0"
+  }
 }
