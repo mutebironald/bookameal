@@ -13,7 +13,7 @@ export function userSignupRequest(data){
         //     }
         return axios.post(`/auth/register`, data)
         .then(response => {
-            console.log(response.data)
+            console.log("responding",response.data)
             dispatch({type: "SIGNUP_USER",payload: data});
             return {signedUp: true, message: "You have successfully signed up" };
         })
