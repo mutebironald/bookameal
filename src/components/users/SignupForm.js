@@ -30,6 +30,7 @@ class SignupForm extends React.Component {
     constructor(props){
     super(props);
     this.state = {
+        username: '',
         email:'',
         password:'',
         is_admin: '',
@@ -127,6 +128,18 @@ class SignupForm extends React.Component {
                 <h1 class="text-center">Register</h1>
                 <div className="panel panel-default">
                 <FormErrors formErrors={this.state.formErrors} />
+                </div>
+
+                <div className="form-group">
+                    <label className="control-label"><strong>Username</strong></label>
+                    <input
+                        value={this.state.username}
+                        onChange={this.onChange}
+                        type="text"
+                        name="username"
+                        className="form-control"
+                        placeholder="Username"
+                    />
                 </div>
 
                 <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
