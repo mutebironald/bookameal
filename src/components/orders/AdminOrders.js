@@ -5,6 +5,8 @@ import { Card, Button, CardTitle, CardText } from 'reactstrap';
 import CreateOrder from './CreateOrder';
 import axios from 'axios'
 
+import GetCustomerHistory from './GetCustomerHistory';
+
 import { Badge, Col,
     Modal, ModalHeader, ModalBody,
      ModalFooter , Form, FormGroup,
@@ -117,6 +119,7 @@ class AdminOrders extends React.Component {
         <ModalHeader toggle={this.toggle1} class="modal">History</ModalHeader>
         <ModalBody class="modal-main">
             {/* <CreateOrder id={this.state.id} toggle={this.toggle1.bind(this)}/> */}
+            <GetCustomerHistory />
         </ModalBody>
         <ModalFooter>
             {/* <button onClick={() => this.resetOrder()} className="btn btn-primary">Close</button> */}
@@ -144,7 +147,7 @@ class AdminOrders extends React.Component {
                         <NavLink href='/getMeals' activeStyle={selectedStyle}>Meals</NavLink>
                         <NavLink href='/adminMenu' activeStyle={selectedStyle}>Menu</NavLink>           
                         <NavLink href='/adminOrders' activeStyle={selectedStyle}>Orders</NavLink>
-                        <NavLink href='/login' activeStyle={selectedStyle}>Logout</NavLink>
+                        <NavLink href='/adminlogin' activeStyle={selectedStyle}>Logout</NavLink>
                         </Nav>      
                     </Collapse>
                 </Navbar>
