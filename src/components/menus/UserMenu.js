@@ -35,6 +35,8 @@ import CreateMenuPage from './CreateMenuPage'
 
 import CreateOrder from '../orders/CreateOrder';
 
+import GetOrderHistory from '../orders/GetOrderHistory';
+
 const selectedStyle = {
     backgroundColor: "white",
     color: "slategasy"
@@ -96,16 +98,20 @@ class UserMenu extends React.Component {
 
     toggle1(id){
         this.setState({
-            modal1: !this.state.modal,
+            modal1: false,
             id: id
         });
     }
 
     toggle2(){
         this.setState({
-            modal2: !this.state.modal
+            modal2: !this.state.modal2
         });
     }
+
+    resetOrder = () =>  this.setState({
+        modal2: !this.state.modal2
+    });
 
 
     returnMenu = () =>{
@@ -121,7 +127,7 @@ class UserMenu extends React.Component {
         }else {
            return (
 
-            <div class="text-center">
+            <div class="text-center" >
 
             <Navbar color="success" light expand="md">
                 <NavbarBrand href="/">Book-A-Meal | Home </NavbarBrand>
@@ -131,20 +137,23 @@ class UserMenu extends React.Component {
                         <NavLink href='/userMenu' activeStyle={selectedStyle}>Menu</NavLink>
 
                         <NavLink href="/login" activeStyle={selectedStyle}>Logout</NavLink>
+
         
                     </Nav>
                     
                 </Collapse>
               </Navbar>
-              <div className="col-md-3">
+              <div className="col-md-20">
                 <span className="btn btn-success btn-sm" onClick={() => this.toggle2()} style={{margin: "20px"}}>Order History</span>
               </div>
+
+              <div style={{margin: "10px 10px 10px 10px"}} class="text-center">
 
               
 
             {menu.menuMeals.Menu.map((menu) =>
                 
-                <div style={{ width: "32rem", height:"9rem", margin: "10px"}} className="card mt-2 border-success text-center center">
+                <div style={{ width: "32rem", height:"10rem", margin: "10px 10px 10px 10px"}} className="card mt-2 border-success text-center center">
                 <div className="row text-bold " >
                 
                 <div className="col-md-9 meal-data text-center">
@@ -165,11 +174,13 @@ class UserMenu extends React.Component {
                 <div className="col-md-3 meal-data text-center">
                     <strong>Day:</strong>{menu.day}
                 </div>
-                </div>
+                </div><br/><br/>
                     
                 </div>
                
             )}
+
+            </div><br/><br/>
             
 
             <Modal isOpen={this.state.modal1} backdropTransition={{ timeout: 1300}}
@@ -188,10 +199,11 @@ class UserMenu extends React.Component {
                 toggle={this.toggle2} className={this.props.className}>
                 <ModalHeader toggle={this.toggle2} class="modal" >My Order History</ModalHeader>
                 <ModalBody class="modal-main">
-                    <CreateOrder id={this.state.id} toggle={this.toggle2.bind(this)}/>
+                    <GetOrderHistory/>
+                    {/* <CreateOrder id={this.state.id} toggle={this.toggle2.bind(this)}/> */}
                 </ModalBody>
                 <ModalFooter>
-                    {/* <button onClick={() => this.resetOrder()} className="btn btn-primary">Close</button> */}
+                    <button onClick={() => this.resetOrder()} className="btn btn-primary">Close</button>
                 </ModalFooter>
             </Modal>
  
