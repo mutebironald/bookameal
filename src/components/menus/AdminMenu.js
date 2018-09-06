@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 
 import axios from 'axios'
 
-import { Badge, Button, Col,
+import { Button, Col,
     Modal, ModalHeader, ModalBody,
-     ModalFooter , Form, FormGroup,
-      Label, Input} from 'reactstrap'
+    } from 'reactstrap'
 
 import {
         Collapse,
@@ -13,13 +12,7 @@ import {
         NavbarToggler,
         NavbarBrand,
         Nav,
-        NavItem,
-        NavLink,
-        NavDropdown,
-        DropdownMenu,
-        DropdownItem,
-        UncontrolledDropdown,
-        DropdownToggle,
+        NavLink
         } from 'reactstrap';
 
 
@@ -30,32 +23,70 @@ import GetMenuPage from './GetMenuPage';
 
 import CreateMenuPage from './CreateMenuPage'
 
+import getCurrentDay from '../current'
+
+import WeekDays from '../Weekdays'
+
 const selectedStyle = {
     backgroundColor: "white",
     color: "slategasy"
   }
 
+const today = getCurrentDay();
+
 class AdminMenu extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            menu: [],
-            modal: false
+            menus: [],
+            modal: false,
+            // today: '',
+            currentMenu: {
+                day: "",
+                meals: []
+                
+              }
             }
             this.toggle = this.toggle.bind(this)
+            this.getMenus = this.getMenus.bind(this)
         };
 
-    componentDidMount(){
-        axios.get('/api/v1/menu/caterer/2')
-        .then(response => { console.log(response.data); return response.data })
-        .then(resData => {
 
-            let meals = resData
-           this.setState({ menuMeals: meals });
-           console.log("Menu-state",this.state)
-           console.log("hshdgd---")
-        })
+
+    getMenus = () => {
+        console.log("getMenus", axios.get(`api/v1/menu` , {headers:{"Authorization": localStorage.getItem('Authorization')}}))
+        axios.get(`api/v1/menu`, {headers:{"Authorization": localStorage.getItem('Authorization')}})
+        .then(response => {
+            console.log("this getMenus response",today, response.data.Menu,"hererea", response.data.Menu.find(
+              menu => today === menu.day
+            ))
+            const today = getCurrentDay();
+            console.log("magicmarie",response.data.Menu.day)
+            const currentMenu = response.data.Menu.find(
+             menu => today.toLowerCase() === menu.day
+            );
+            console.log("current menu" , currentMenu)
+            this.setState({
+              menus: response.data.Menu,
+              currentMenu
+            });
+            console.log("this is your state",currentMenu)
+          })
+        }
+
+    getMenu = day => {
+        day = day.charAt(0).toUpperCase() + day.slice(1);
+        const { menus } = this.state;
+        const currentMenu = menus.find(menu => day.toLowerCase() === menu.day);
+        console.log("At this point debugging kicks in", currentMenu)
+        this.setState({ currentDay: day.toLowerCase(), currentMenu: currentMenu });
+        console.log("howday this is our current day", day, "menu", this.state)
     };
+
+
+    componentDidMount() {
+        this.getMenus();
+      }
 
     
 
@@ -66,10 +97,10 @@ class AdminMenu extends React.Component {
     }
 
     returnMenu = () =>{
-        const  menu = this.state;
+        const  currentMenu = this.state.currentMenu;
 
-        if(menu.menuMeals === undefined){
-            console.log(menu)
+        if(currentMenu.meals.length === undefined){
+            console.log("we are here",currentMenu.meals)
             return (
                 <div>
                <h2 class="text-white">No meals in menu</h2>
@@ -100,11 +131,21 @@ class AdminMenu extends React.Component {
                     </Nav>      
                 </Collapse>
                 </Navbar>
+                
                 <button className="btn btn-success btn-sm" onClick={this.toggle} style={{ width: "4rem", height:"2rem",  margin: "10px"}}>Add</button>
+
+                <div className="row">
+                <div className="col-md-2">
+                <div className="header text-center" style={{ margin: "5px"}}><strong><h3>Weekday</h3></strong></div>
+                <ul className="list-group">
+                    <WeekDays getMenu={this.getMenu} />
+                </ul>
+                </div>
+                {/* </div> */}
                 
-            {menu.menuMeals.Menu.map((menu) =>
+            {currentMenu.meals.map((menu) =>
                 
-                <div className="card mt-2" style={{ width: "32rem", height:"9rem", margin: "10px"}} class="card mt-2 border-success text-center center">
+                <div className="card mt-2" style={{ width: "25rem", height:"5rem", margin: "10px"}} class="card mt-2 border-success text-center center">
                 <div className="row text-bold">
                 
                 <div className="col-md-5 meal-data text-center">
@@ -115,9 +156,9 @@ class AdminMenu extends React.Component {
                     <strong>Price:</strong>{menu.price}
                 </div>
 
-                <div className="col-md-8 meal-data text-center">
+                {/* <div className="col-md-8 meal-data text-center">
                     <strong>Day:</strong>{menu.day}
-                </div>
+                </div> */}
                 </div>
                                    
                 </div>
@@ -133,6 +174,8 @@ class AdminMenu extends React.Component {
             </Modal>
 
             </div>
+            </div>
+        
             </Col>
 
         );
