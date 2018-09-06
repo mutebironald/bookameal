@@ -7,24 +7,16 @@ import axios from 'axios'
 
 import GetCustomerHistory from './GetCustomerHistory';
 
-import { Badge, Col,
-    Modal, ModalHeader, ModalBody,
-     ModalFooter , Form, FormGroup,
-      Label, Input} from 'reactstrap'
-
 import {
+        Modal, ModalHeader,
+        ModalBody,
+        ModalFooter,
         Collapse,
         Navbar,
         NavbarToggler,
         NavbarBrand,
         Nav,
-        NavItem,
-        NavLink,
-        NavDropdown,
-        DropdownMenu,
-        DropdownItem,
-        UncontrolledDropdown,
-        DropdownToggle,
+        NavLink
         } from 'reactstrap';
 
 
