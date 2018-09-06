@@ -4,6 +4,8 @@ import '../.././index.css';
 import axios from 'axios'
 import { Card, Button, CardTitle, CardText } from 'reactstrap';
 
+// import { getOrderHistory } from '../../'
+
 class GetOrderHistory extends React.Component{
     constructor(props){
         super(props);
@@ -13,7 +15,7 @@ class GetOrderHistory extends React.Component{
     }
     
     componentDidMount(){
-        axios.get(`api/v1/orders/users/` + 4)
+        axios.get(`api/v1/orders/users`, {headers:{"Authorization": localStorage.getItem('Authorization')}})
         .then(res => res)
         .then(resData => {
             let meals = resData
@@ -30,7 +32,7 @@ class GetOrderHistory extends React.Component{
         console.log("your decider",order)
         console.log("my state now over run", order)
 
-        if(order.orderMeals === undefined){
+        if(order.data === undefined){
             console.log(this.state)
             console.log("boolean",typeof order.orderMeals === undefined)
             return (
@@ -42,11 +44,12 @@ class GetOrderHistory extends React.Component{
         else {
             return (
                 
-                order.orderMeals.map((order) => (
+                order.data.Orders.map((order) => (
                     <div>
-                        <Card body outline color="sucess" style={{ width: "32rem", height:"9rem", margin: "10px"}} >
-                            <CardTitle className="text-center">Order</CardTitle>
-                            <CardText className="text-center"><strong>Id:</strong>{order.id}</CardText>
+                        <Card body outline color="sucess" style={{ width: "28rem", height:"10rem", margin: "10px"}} >
+                            {/* <CardTitle className="text-center">Order</CardTitle> */}
+                            <CardText className="text-center"><strong>Meal:</strong>{order.meal}</CardText>
+                            <CardText className="text-center"><strong>Price:</strong>{order.price}</CardText>
                             <CardText className="text-center"><strong>Time:</strong>{order.order_time}</CardText>
                         </Card>
 
