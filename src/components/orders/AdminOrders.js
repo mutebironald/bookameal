@@ -25,6 +25,7 @@ const selectedStyle = {
         color: "slategasy"
       }
 
+
 class AdminOrders extends React.Component {
     constructor(props){
         super(props);
@@ -91,12 +92,13 @@ class AdminOrders extends React.Component {
             </div>
 
             <div className="col-md-9 meal-data text-center">
-                <strong>Price:</strong>{order.price}
+                <strong>Price:</strong>(order.price)
             </div>
 
             <div className="col-md-9 meal-data text-center">
                 <strong>Time:</strong>{order.order_time}
             </div>
+            
 
             <div className="col-md-9 meal-data text-center">
                 <strong>Ordered By:</strong>{order.user}
