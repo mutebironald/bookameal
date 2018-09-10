@@ -46,7 +46,7 @@ class CreateMenu extends React.Component {
                     <input
                         value={this.state.meal_id}
                         onChange={this.onChange}
-                        type="text"
+                        type="number"
                         name="meal_id"
                         className="form-control"
                     />
@@ -61,6 +61,7 @@ class CreateMenu extends React.Component {
                         name="day"
                         className="form-control"
                     />
+               
                     
                 </div>
 
