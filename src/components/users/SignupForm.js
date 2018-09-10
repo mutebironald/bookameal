@@ -120,12 +120,12 @@ class SignupForm extends React.Component {
 
             
 
-            <div class="wrapper">
+            <div className="wrapper">
 
 
-            <form onSubmit={this.onSubmit} class="form-signin">
+            <form onSubmit={this.onSubmit} className="form-signin">
             <Notifications/>
-                <h1 class="text-center">Register</h1>
+                <h1 className="text-center">Register</h1>
                 <div className="panel panel-default">
                 <FormErrors formErrors={this.state.formErrors} />
                 </div>
