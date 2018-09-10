@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../.././index.css';
 import { Card, Button, CardTitle, CardText } from 'reactstrap';
 
 import CreateOrder from './CreateOrder';
-import axios from 'axios'
 
-import { Badge, Col,
-    Modal, ModalHeader, ModalBody,
-     ModalFooter , Form, FormGroup,
-      Label, Input} from 'reactstrap'
+import { Modal, ModalHeader, ModalBody} from 'reactstrap'
 
 import {
         Collapse,
@@ -16,13 +12,7 @@ import {
         NavbarToggler,
         NavbarBrand,
         Nav,
-        NavItem,
         NavLink,
-        NavDropdown,
-        DropdownMenu,
-        DropdownItem,
-        UncontrolledDropdown,
-        DropdownToggle,
         } from 'reactstrap';
 
 
