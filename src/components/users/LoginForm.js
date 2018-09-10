@@ -26,7 +26,7 @@ import {
       }
 
 
-class LoginForm extends React.Component {
+export class LoginForm extends React.Component {
     constructor(props, context){
     super(props);
     this.state = {
@@ -149,12 +149,12 @@ class LoginForm extends React.Component {
               </Collapse>
             </Navbar>
 
-            <div class="wrapper">
+            <div className="wrapper">
 
 
-            <form onSubmit={this.onSubmit} class="form-signin">
+            <form onSubmit={this.onSubmit} className="form-signin">
             <Notifications/>
-                <h6 class="text-center"><strong>Login</strong></h6>
+                <h6 className="text-center"><strong>Login</strong></h6>
                 <div className="panel panel-default">
                 {/* <FormErrors formErrors={this.state.formErrors}  /> */}
                 </div>
@@ -166,7 +166,7 @@ class LoginForm extends React.Component {
                         onChange={this.onChange}
                         type="text"
                         name="username"
-                        className="form-control"
+                        className="form-control login-input"
                         placeholder="Username"
                     />
                 </div>
@@ -191,7 +191,7 @@ class LoginForm extends React.Component {
                         type="password"
                         name="password"
                         className="form-control"
-                        minlength="5"
+                        minLength="5"
                         required
                     />
                 </div>
