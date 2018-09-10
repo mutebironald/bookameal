@@ -6,7 +6,17 @@ body {
   font-family: sans-serif;
 
   /* background-color: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),red !important; */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('./images/vegmeals.jpg') 
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('./images/non-veg-meals-mini.jpg'); 
+  /* background-size: 300px 1000px; */
+  border-image: url("./images/vegmeals.jpg") 25 25 round;
+
+
+  /* position: fixed; */
+  /* left: 0; */
+  /* right: 0; */
+  /* overflow-y: scroll; */
+  /* bottom:0; */
+  /* background-size: cover; */
 }
 
 /* Animations-- reactCSSTransitionGroup */
@@ -77,5 +87,3 @@ div.add{
   background-color: #fff;
   border: 1px solid rgba(0. 0, 0, 0.1);
 }
-
-
