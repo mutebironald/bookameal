@@ -1,4 +1,5 @@
 import axios from "axios";
+import instance from '../../actions/instance';
 import React, { Component } from "react";
 import Notifications, { notify } from "react-notify-toast";
 import {
@@ -49,13 +50,10 @@ class GetMeals extends Component {
 
   onChange(event) {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(event.target.name);
-    console.log(event.target.value);
   }
 
   onSubmit(event) {
     event.preventDefault();
-    console.log(JSON.stringify(this.state));
     this.props.updateMealRequest(this.props.id, this.state);
 
     this.setState({
@@ -73,17 +71,7 @@ class GetMeals extends Component {
   }
 
   componentWillReceiveProps() {
-    console.log("am here");
-    axios
-      .get("/api/v1/meals")
-      .then(response => {
-        console.log(response.data);
-        return response.data;
-      })
-      .then(resData => {
-        let meals = resData.Meals;
-        this.setState({ meals: meals });
-      });
+    this.refreshMeals();
   }
 
   resetDeletion = () =>
@@ -94,43 +82,31 @@ class GetMeals extends Component {
 
   deleteMeal = () => {
     const id = this.state.id;
-    axios
-      .delete(`/api/v1/meals/` + id)
+    const url = `/api/v1/meals/${id}`
+    instance
+      .delete(url)
       .then(response => {
-        console.log(response.data);
         return response.data;
       })
-      .then(resData => {
-        let meals = resData;
-        console.log("deleted", meals);
-
-        axios
-          .get("/api/v1/meals")
-          .then(response => {
-            console.log(response.data);
-            return response.data;
-          })
-          .then(resData => {
-            let meals = resData.Meals;
-            this.setState({ meals: meals });
-
-            console.log(
-              "state",
-              resData,
-              "meals",
-              meals,
-              "this.state.meals",
-              this.state.meals
-            );
-          });
+      .then(() => {
+        this.refreshMeals();
       });
-
-    //TODO: make request to delete meal, if request successfully or not successfully display a message
     this.resetDeletion();
   };
 
+  refreshMeals  = () =>{
+    instance
+    .get("/api/v1/meals")
+    .then(response => {
+      return response.data;
+    })
+    .then(resData => {
+      let meals = resData.Meals;
+      this.setState({ meals: meals });
+    });
+  }
+
   toggle1(meal) {
-    console.log("id", meal.id, "name", meal.name, "price", meal.price);
     this.setState({
       modal1: !this.state.modal1,
       id: meal.id,
@@ -149,21 +125,15 @@ class GetMeals extends Component {
     let green = { background: "green", text: "white" };
     notify.show("Meals", "custom", 5000, green);
 
-    axios
+    instance
       .get("/api/v1/meals")
       .then(response => {
-        console.log(response.data);
         return response.data;
       })
       .then(resData => {
         let meals = resData.Meals;
         this.setState({ meals: meals });
-        console.log("state", this.state.meals);
       });
-  }
-
-  onClick() {
-    console.log("here");
   }
 
   render() {
@@ -198,6 +168,7 @@ class GetMeals extends Component {
 
             {this.state.meals.map((meal, index) => (
               <div
+                 key={meal.id}
                 className="card mt-2"
                 style={{
                   width: "32rem",

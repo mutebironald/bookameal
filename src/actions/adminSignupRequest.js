@@ -1,8 +1,9 @@
-import axios from 'axios'
+import axios from 'axios';
+import instance from '../actions/instance';
 
 export function adminSignupRequest(data){
     return function(dispatch){
-        return axios.post(`/auth/admin/register`, data)
+        return instance.post(`/auth/admin/register`, data)
         .then(response => {
             console.log(response)
             dispatch({ type: "SIGNUP_ADMIN", payload: data});

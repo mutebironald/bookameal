@@ -1,10 +1,10 @@
 import React from 'react'
-import current from '../components/current'
+import CurrentDay from '../components/current'
 
 describe("AdminDashboard component", () => {
     let wrapper;
     beforeEach(() => {
-        wrapper = shallow(<current/>);
+        wrapper = shallow(<CurrentDay/>);
 
     });
     it("should render correctly", ()=> {

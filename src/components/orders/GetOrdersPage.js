@@ -1,5 +1,4 @@
-import React, { Component  } from "react";
-import GetOrders from "./GetOrders";
+import React, { Component } from "react";
 class GetOrdersPage extends Component{
     render(){
         return(

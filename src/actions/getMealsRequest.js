@@ -1,10 +1,11 @@
 import axios from 'axios';
+import instance from '../actions/instance';
 
 export function getMealsRequest(){
     return function(dispatch){
         // console.log(data)
 
-        return axios.get('/api/v1/meals')
+        return instance.get('/api/v1/meals')
         .then(response => {
             // console.log(response.dtata)
             dispatch({ type: "GET_MEALS"});

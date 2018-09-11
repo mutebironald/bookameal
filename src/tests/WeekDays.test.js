@@ -6,7 +6,7 @@ describe("WeekDays component", () => {
     let mockFn;
     beforeEach(() => {
         mockFn = jest.fn();
-        wrapper = shallow(<WeekDays/>);
+        wrapper = mount(<WeekDays getMenu={mockFn}/>);
     });
     it("renders successfully", () => {
         expect(wrapper).toMatchSnapshot();
@@ -16,7 +16,7 @@ describe("WeekDays component", () => {
         wrapper
             .find("#monday")
             .first()
-            .simulate("click")
+            .simulate("click");
 
         expect(mockFn.mock.calls.length).toBe(1);
     });

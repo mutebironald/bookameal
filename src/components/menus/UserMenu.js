@@ -1,38 +1,13 @@
-import React, { Component } from 'react';
-
-import axios from 'axios'
-
-import { 
-    Modal, ModalHeader, ModalBody,
-    ModalFooter 
-      } from 'reactstrap'
-
-import {
-        Collapse,
-        Navbar,
-        NavbarToggler,
-        NavbarBrand,
-        Nav,
-        NavLink,
-       
-        } from 'reactstrap';
-        
-
-
-
-
-import '../.././index.css';
+import React from 'react';
+import { Collapse, Modal, ModalBody, ModalFooter, ModalHeader, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reactstrap';
 import '../.././App.css';
-
-import GetMenuPage from './GetMenuPage';
-
-import CreateMenuPage from './CreateMenuPage'
-
+import '../.././index.css';
+import instance from '../../actions/instance';
 import CreateOrder from '../orders/CreateOrder';
-
 import GetOrderHistory from '../orders/GetOrderHistory';
+import WeekDays from '../Weekdays';
 
-import WeekDays from '../Weekdays'
+
 
 const selectedStyle = {
     backgroundColor: "white",
@@ -56,7 +31,7 @@ class UserMenu extends React.Component {
 
 
     getMenus = day => {
-        axios.get(`api/v1/menu/caterer/${day}`)
+        instance.get(`api/v1/menu/caterer/${day}`)
         .then(response => { console.log("here -------- response", response.data.Menu);
          return response.data.Menu })
         .then(menu => {
@@ -112,7 +87,7 @@ class UserMenu extends React.Component {
     makeOrder = () => {
         const id  = this.state.id;
 
-        axios.post(`/api/v1/orders`, id)
+        instance.post(`/api/v1/orders`, id)
         .then(response => {
             console.log("response", response.data)
             dispatchEvent({ type: "ADD_ORDER", payload: id});

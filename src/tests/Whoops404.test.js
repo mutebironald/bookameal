@@ -1,10 +1,14 @@
 import React from 'react';
 import Whoops404 from '../components/Whoops404';
 
+
 describe("Not found component", () => {
     let wrapper;
     beforeEach(() => {
-        wrapper = shallow(<Whoops404 />);
+        const location = {
+            pathname: ""
+        }
+        wrapper = shallow(<Whoops404 location={location} />);
         
     });
     it("should render correctly", () => {

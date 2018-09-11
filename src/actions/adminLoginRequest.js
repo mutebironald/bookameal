@@ -1,12 +1,14 @@
 import axios from 'axios';
+import instance from '../actions/instance';
 
 export function adminLoginRequest(data){
     return function(dispatch){
         console.log("This is an Administrator", data)
-        console.log(axios.post(`/auth/admin/login`, data))
+        console.log(instance.post(`/auth/admin/login`, data))
 
-        return axios.post(`/auth/admin/login`, data)
+        return instance.post(`/auth/admin/login`, data)
         .then(res => {
+            console.log("here")
             console.log(res.data.message)
             console.log("here here", res.data.access_token)
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import axios from 'axios'
+import instance from '../../actions/instance';
 
 import { Badge, Button, Col,
     Modal, ModalHeader, ModalBody,
@@ -46,7 +47,7 @@ class GetMenu extends React.Component {
         };
 
     componentDidMount(){
-        axios.get('/api/v1/menu')
+        instance.get('/api/v1/menu')
         .then(response => { console.log(response.data); return response.data })
         .then(resData => {
 

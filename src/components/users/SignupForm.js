@@ -1,32 +1,20 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { userSignupRequest } from '../../actions/userSignupRequest'
-
-import { FormErrors } from '../../FormErrors'
-import '../.././App.css'
-import '../.././index.css'
-
-import Notifications, {notify} from 'react-notify-toast';
+import Notifications, { notify } from 'react-notify-toast';
+import { connect } from 'react-redux';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reactstrap';
 import toastr from 'toastr';
-
-
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,NavLink,
-  } from 'reactstrap';
-
-
+import '../.././App.css';
+import '../.././index.css';
+import { userSignupRequest } from '../../actions/userSignupRequest';
+import { FormErrors } from '../../FormErrors';
 
     const selectedStyle = {
         backgroundColor: "white",
         color: "slategasy"
       }
 
-class SignupForm extends React.Component {
+export class SignupForm extends React.Component {
     constructor(props){
     super(props);
     this.state = {

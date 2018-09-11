@@ -1,9 +1,10 @@
 import axios from 'axios';
+import instance from '../actions/instance';
 
 export function addOrderRequest(data){
     return function(dispatch){
 
-        return axios.post(`/api/v1/orders`, data, {headers:{"Authorization": localStorage.getItem('Authorization')}})
+        return instance.post(`/api/v1/orders`, data, {headers:{"Authorization": localStorage.getItem('Authorization')}})
         .then(response => {
             console.log(response.data)
             console.log("watch me nae nae",response)

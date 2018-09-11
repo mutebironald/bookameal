@@ -1,10 +1,7 @@
 import React from 'react';
+import { Card, CardText } from 'reactstrap';
 import '../.././index.css';
-
-import axios from 'axios'
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
-
-// import { getOrderHistory } from '../../'
+import instance from '../../actions/instance';
 
 class GetOrderHistory extends React.Component{
     constructor(props){
@@ -15,7 +12,7 @@ class GetOrderHistory extends React.Component{
     }
     
     componentDidMount(){
-        axios.get(`api/v1/orders/users`, {headers:{"Authorization": localStorage.getItem('Authorization')}})
+        instance.get(`api/v1/orders/users`, {headers:{"Authorization": localStorage.getItem('Authorization')}})
         .then(res => res)
         .then(resData => {
             let meals = resData

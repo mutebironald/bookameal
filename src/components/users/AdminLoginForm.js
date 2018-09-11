@@ -1,33 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-
-import { adminLoginRequest } from '../../actions/adminLoginRequest';
-import '../.././App.css'
-import '../.././index.css'
-
-import Notifications, {notify} from 'react-notify-toast';
+import Notifications, { notify } from 'react-notify-toast';
+import { connect } from 'react-redux';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reactstrap';
 import toastr from 'toastr';
-
-import { Badge, Button, Col,
-    Modal, ModalHeader, ModalBody,
-     ModalFooter , Form, FormGroup,
-      Label, Input} from 'reactstrap'
-
-import {
-        Collapse,
-        Navbar,
-        NavbarToggler,
-        NavbarBrand,
-        Nav,
-        NavItem,
-        NavLink,
-        NavDropdown,
-        DropdownMenu,
-        DropdownItem,
-        UncontrolledDropdown,
-        DropdownToggle,
-        } from 'reactstrap';
+import '../.././App.css';
+import '../.././index.css';
+import { adminLoginRequest } from '../../actions/adminLoginRequest';
         
 
 const selectedStyle = {
@@ -35,7 +14,7 @@ const selectedStyle = {
     color: "slategasy"
 }
 
-class AdminLoginForm extends React.Component {
+export class AdminLoginForm extends React.Component {
     constructor(props){
         super(props);
         this.state ={
@@ -49,13 +28,8 @@ class AdminLoginForm extends React.Component {
     }
 
     componentDidMount(){
-        console.log(this.props)
         let green = { background: 'green', text: "white" };
         notify.show("login", "custom", 1000, green)
-    }
-
-    componentWillMount(){
-        console.log("the props are here---------------",this.props)
     }
 
     onChange(event){
@@ -96,8 +70,6 @@ class AdminLoginForm extends React.Component {
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
-                        {/* <NavLink href='/getMeals' activeStyle={selectedStyle}>Meals</NavLink>
-                        <NavLink href='/adminMenu' activeStyle={selectedStyle}>Menu</NavLink>            */}
                         <NavLink href='/adminregister' activeStyle={selectedStyle}>Signup</NavLink>
                         <NavLink href='/adminlogin' activeStyle={selectedStyle}>Login</NavLink>
                         </Nav>      

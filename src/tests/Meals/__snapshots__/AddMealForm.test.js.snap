@@ -1,0 +1,1399 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Meal Component renders successfully 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddMealForm
+    addMealRequest={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Form
+        onSubmit={[Function]}
+        tag="form"
+>
+        <_class
+                options={Object {}}
+        />
+        <h4>
+                Add meal
+        </h4>
+        <div
+                className="form-group"
+        >
+                <Col
+                        tag="div"
+                        widths={
+                                Array [
+                                        "xs",
+                                        "sm",
+                                        "md",
+                                        "lg",
+                                        "xl",
+                                      ]
+                        }
+                >
+                        <FormGroup
+                                tag="div"
+                        >
+                                <Label
+                                        className="control-label"
+                                        tag="label"
+                                        widths={
+                                                Array [
+                                                        "xs",
+                                                        "sm",
+                                                        "md",
+                                                        "lg",
+                                                        "xl",
+                                                      ]
+                                        }
+                                >
+                                        Name
+                                </Label>
+                                <input
+                                        className="form-control"
+                                        name="name"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                                />
+                        </FormGroup>
+                </Col>
+        </div>
+        <div
+                className="form-group"
+        >
+                <Col
+                        tag="div"
+                        widths={
+                                Array [
+                                        "xs",
+                                        "sm",
+                                        "md",
+                                        "lg",
+                                        "xl",
+                                      ]
+                        }
+                >
+                        <FormGroup
+                                tag="div"
+                        >
+                                <Label
+                                        className="control-label"
+                                        tag="label"
+                                        widths={
+                                                Array [
+                                                        "xs",
+                                                        "sm",
+                                                        "md",
+                                                        "lg",
+                                                        "xl",
+                                                      ]
+                                        }
+                                >
+                                        Price
+                                </Label>
+                                <Input
+                                        className="form-control"
+                                        name="price"
+                                        onChange={[Function]}
+                                        type="number"
+                                        value=""
+                                />
+                                <FormText
+                                        color="muted"
+                                        tag="small"
+                                >
+                                        <p>
+                                                Price is an Integer
+                                        </p>
+                                </FormText>
+                        </FormGroup>
+                </Col>
+        </div>
+        <div
+                className="form-group"
+        >
+                <Button
+                        className="btn btn-primary btn-success"
+                        color="secondary"
+                        tag="button"
+                >
+                        Add Meal
+                </Button>
+        </div>
+</Form>,
+      "tag": "div",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <_class
+            options={Object {}}
+/>,
+          <h4>
+            Add meal
+</h4>,
+          <div
+            className="form-group"
+>
+            <Col
+                        tag="div"
+                        widths={
+                                    Array [
+                                                "xs",
+                                                "sm",
+                                                "md",
+                                                "lg",
+                                                "xl",
+                                              ]
+                        }
+            >
+                        <FormGroup
+                                    tag="div"
+                        >
+                                    <Label
+                                                className="control-label"
+                                                tag="label"
+                                                widths={
+                                                            Array [
+                                                                        "xs",
+                                                                        "sm",
+                                                                        "md",
+                                                                        "lg",
+                                                                        "xl",
+                                                                      ]
+                                                }
+                                    >
+                                                Name
+                                    </Label>
+                                    <input
+                                                className="form-control"
+                                                name="name"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                    />
+                        </FormGroup>
+            </Col>
+</div>,
+          <div
+            className="form-group"
+>
+            <Col
+                        tag="div"
+                        widths={
+                                    Array [
+                                                "xs",
+                                                "sm",
+                                                "md",
+                                                "lg",
+                                                "xl",
+                                              ]
+                        }
+            >
+                        <FormGroup
+                                    tag="div"
+                        >
+                                    <Label
+                                                className="control-label"
+                                                tag="label"
+                                                widths={
+                                                            Array [
+                                                                        "xs",
+                                                                        "sm",
+                                                                        "md",
+                                                                        "lg",
+                                                                        "xl",
+                                                                      ]
+                                                }
+                                    >
+                                                Price
+                                    </Label>
+                                    <Input
+                                                className="form-control"
+                                                name="price"
+                                                onChange={[Function]}
+                                                type="number"
+                                                value=""
+                                    />
+                                    <FormText
+                                                color="muted"
+                                                tag="small"
+                                    >
+                                                <p>
+                                                            Price is an Integer
+                                                </p>
+                                    </FormText>
+                        </FormGroup>
+            </Col>
+</div>,
+          <div
+            className="form-group"
+>
+            <Button
+                        className="btn btn-primary btn-success"
+                        color="secondary"
+                        tag="button"
+            >
+                        Add Meal
+            </Button>
+</div>,
+        ],
+        "onSubmit": [Function],
+        "tag": "form",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "options": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add meal",
+          },
+          "ref": null,
+          "rendered": "Add meal",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Col
+              tag="div"
+              widths={
+                            Array [
+                                          "xs",
+                                          "sm",
+                                          "md",
+                                          "lg",
+                                          "xl",
+                                        ]
+              }
+>
+              <FormGroup
+                            tag="div"
+              >
+                            <Label
+                                          className="control-label"
+                                          tag="label"
+                                          widths={
+                                                        Array [
+                                                                      "xs",
+                                                                      "sm",
+                                                                      "md",
+                                                                      "lg",
+                                                                      "xl",
+                                                                    ]
+                                          }
+                            >
+                                          Name
+                            </Label>
+                            <input
+                                          className="form-control"
+                                          name="name"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value=""
+                            />
+              </FormGroup>
+</Col>,
+            "className": "form-group",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <FormGroup
+                tag="div"
+>
+                <Label
+                                className="control-label"
+                                tag="label"
+                                widths={
+                                                Array [
+                                                                "xs",
+                                                                "sm",
+                                                                "md",
+                                                                "lg",
+                                                                "xl",
+                                                              ]
+                                }
+                >
+                                Name
+                </Label>
+                <input
+                                className="form-control"
+                                name="name"
+                                onChange={[Function]}
+                                type="text"
+                                value=""
+                />
+</FormGroup>,
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <Label
+                    className="control-label"
+                    tag="label"
+                    widths={
+                                        Array [
+                                                            "xs",
+                                                            "sm",
+                                                            "md",
+                                                            "lg",
+                                                            "xl",
+                                                          ]
+                    }
+>
+                    Name
+</Label>,
+                  <input
+                    className="form-control"
+                    name="name"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+/>,
+                ],
+                "tag": "div",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Name",
+                    "className": "control-label",
+                    "tag": "label",
+                    "widths": Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": "Name",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "form-control",
+                    "name": "name",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Col
+              tag="div"
+              widths={
+                            Array [
+                                          "xs",
+                                          "sm",
+                                          "md",
+                                          "lg",
+                                          "xl",
+                                        ]
+              }
+>
+              <FormGroup
+                            tag="div"
+              >
+                            <Label
+                                          className="control-label"
+                                          tag="label"
+                                          widths={
+                                                        Array [
+                                                                      "xs",
+                                                                      "sm",
+                                                                      "md",
+                                                                      "lg",
+                                                                      "xl",
+                                                                    ]
+                                          }
+                            >
+                                          Price
+                            </Label>
+                            <Input
+                                          className="form-control"
+                                          name="price"
+                                          onChange={[Function]}
+                                          type="number"
+                                          value=""
+                            />
+                            <FormText
+                                          color="muted"
+                                          tag="small"
+                            >
+                                          <p>
+                                                        Price is an Integer
+                                          </p>
+                            </FormText>
+              </FormGroup>
+</Col>,
+            "className": "form-group",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <FormGroup
+                tag="div"
+>
+                <Label
+                                className="control-label"
+                                tag="label"
+                                widths={
+                                                Array [
+                                                                "xs",
+                                                                "sm",
+                                                                "md",
+                                                                "lg",
+                                                                "xl",
+                                                              ]
+                                }
+                >
+                                Price
+                </Label>
+                <Input
+                                className="form-control"
+                                name="price"
+                                onChange={[Function]}
+                                type="number"
+                                value=""
+                />
+                <FormText
+                                color="muted"
+                                tag="small"
+                >
+                                <p>
+                                                Price is an Integer
+                                </p>
+                </FormText>
+</FormGroup>,
+              "tag": "div",
+              "widths": Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <Label
+                    className="control-label"
+                    tag="label"
+                    widths={
+                                        Array [
+                                                            "xs",
+                                                            "sm",
+                                                            "md",
+                                                            "lg",
+                                                            "xl",
+                                                          ]
+                    }
+>
+                    Price
+</Label>,
+                  <Input
+                    className="form-control"
+                    name="price"
+                    onChange={[Function]}
+                    type="number"
+                    value=""
+/>,
+                  <FormText
+                    color="muted"
+                    tag="small"
+>
+                    <p>
+                                        Price is an Integer
+                    </p>
+</FormText>,
+                ],
+                "tag": "div",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Price",
+                    "className": "control-label",
+                    "tag": "label",
+                    "widths": Array [
+                      "xs",
+                      "sm",
+                      "md",
+                      "lg",
+                      "xl",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": "Price",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "className": "form-control",
+                    "name": "price",
+                    "onChange": [Function],
+                    "type": "number",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <p>
+                      Price is an Integer
+</p>,
+                    "color": "muted",
+                    "tag": "small",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Price is an Integer",
+                    },
+                    "ref": null,
+                    "rendered": "Price is an Integer",
+                    "type": "p",
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Button
+              className="btn btn-primary btn-success"
+              color="secondary"
+              tag="button"
+>
+              Add Meal
+</Button>,
+            "className": "form-group",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Add Meal",
+              "className": "btn btn-primary btn-success",
+              "color": "secondary",
+              "tag": "button",
+            },
+            "ref": null,
+            "rendered": "Add Meal",
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Form
+          onSubmit={[Function]}
+          tag="form"
+>
+          <_class
+                    options={Object {}}
+          />
+          <h4>
+                    Add meal
+          </h4>
+          <div
+                    className="form-group"
+          >
+                    <Col
+                              tag="div"
+                              widths={
+                                        Array [
+                                                  "xs",
+                                                  "sm",
+                                                  "md",
+                                                  "lg",
+                                                  "xl",
+                                                ]
+                              }
+                    >
+                              <FormGroup
+                                        tag="div"
+                              >
+                                        <Label
+                                                  className="control-label"
+                                                  tag="label"
+                                                  widths={
+                                                            Array [
+                                                                      "xs",
+                                                                      "sm",
+                                                                      "md",
+                                                                      "lg",
+                                                                      "xl",
+                                                                    ]
+                                                  }
+                                        >
+                                                  Name
+                                        </Label>
+                                        <input
+                                                  className="form-control"
+                                                  name="name"
+                                                  onChange={[Function]}
+                                                  type="text"
+                                                  value=""
+                                        />
+                              </FormGroup>
+                    </Col>
+          </div>
+          <div
+                    className="form-group"
+          >
+                    <Col
+                              tag="div"
+                              widths={
+                                        Array [
+                                                  "xs",
+                                                  "sm",
+                                                  "md",
+                                                  "lg",
+                                                  "xl",
+                                                ]
+                              }
+                    >
+                              <FormGroup
+                                        tag="div"
+                              >
+                                        <Label
+                                                  className="control-label"
+                                                  tag="label"
+                                                  widths={
+                                                            Array [
+                                                                      "xs",
+                                                                      "sm",
+                                                                      "md",
+                                                                      "lg",
+                                                                      "xl",
+                                                                    ]
+                                                  }
+                                        >
+                                                  Price
+                                        </Label>
+                                        <Input
+                                                  className="form-control"
+                                                  name="price"
+                                                  onChange={[Function]}
+                                                  type="number"
+                                                  value=""
+                                        />
+                                        <FormText
+                                                  color="muted"
+                                                  tag="small"
+                                        >
+                                                  <p>
+                                                            Price is an Integer
+                                                  </p>
+                                        </FormText>
+                              </FormGroup>
+                    </Col>
+          </div>
+          <div
+                    className="form-group"
+          >
+                    <Button
+                              className="btn btn-primary btn-success"
+                              color="secondary"
+                              tag="button"
+                    >
+                              Add Meal
+                    </Button>
+          </div>
+</Form>,
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <_class
+              options={Object {}}
+/>,
+            <h4>
+              Add meal
+</h4>,
+            <div
+              className="form-group"
+>
+              <Col
+                            tag="div"
+                            widths={
+                                          Array [
+                                                        "xs",
+                                                        "sm",
+                                                        "md",
+                                                        "lg",
+                                                        "xl",
+                                                      ]
+                            }
+              >
+                            <FormGroup
+                                          tag="div"
+                            >
+                                          <Label
+                                                        className="control-label"
+                                                        tag="label"
+                                                        widths={
+                                                                      Array [
+                                                                                    "xs",
+                                                                                    "sm",
+                                                                                    "md",
+                                                                                    "lg",
+                                                                                    "xl",
+                                                                                  ]
+                                                        }
+                                          >
+                                                        Name
+                                          </Label>
+                                          <input
+                                                        className="form-control"
+                                                        name="name"
+                                                        onChange={[Function]}
+                                                        type="text"
+                                                        value=""
+                                          />
+                            </FormGroup>
+              </Col>
+</div>,
+            <div
+              className="form-group"
+>
+              <Col
+                            tag="div"
+                            widths={
+                                          Array [
+                                                        "xs",
+                                                        "sm",
+                                                        "md",
+                                                        "lg",
+                                                        "xl",
+                                                      ]
+                            }
+              >
+                            <FormGroup
+                                          tag="div"
+                            >
+                                          <Label
+                                                        className="control-label"
+                                                        tag="label"
+                                                        widths={
+                                                                      Array [
+                                                                                    "xs",
+                                                                                    "sm",
+                                                                                    "md",
+                                                                                    "lg",
+                                                                                    "xl",
+                                                                                  ]
+                                                        }
+                                          >
+                                                        Price
+                                          </Label>
+                                          <Input
+                                                        className="form-control"
+                                                        name="price"
+                                                        onChange={[Function]}
+                                                        type="number"
+                                                        value=""
+                                          />
+                                          <FormText
+                                                        color="muted"
+                                                        tag="small"
+                                          >
+                                                        <p>
+                                                                      Price is an Integer
+                                                        </p>
+                                          </FormText>
+                            </FormGroup>
+              </Col>
+</div>,
+            <div
+              className="form-group"
+>
+              <Button
+                            className="btn btn-primary btn-success"
+                            color="secondary"
+                            tag="button"
+              >
+                            Add Meal
+              </Button>
+</div>,
+          ],
+          "onSubmit": [Function],
+          "tag": "form",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "options": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add meal",
+            },
+            "ref": null,
+            "rendered": "Add meal",
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Col
+                tag="div"
+                widths={
+                                Array [
+                                                "xs",
+                                                "sm",
+                                                "md",
+                                                "lg",
+                                                "xl",
+                                              ]
+                }
+>
+                <FormGroup
+                                tag="div"
+                >
+                                <Label
+                                                className="control-label"
+                                                tag="label"
+                                                widths={
+                                                                Array [
+                                                                                "xs",
+                                                                                "sm",
+                                                                                "md",
+                                                                                "lg",
+                                                                                "xl",
+                                                                              ]
+                                                }
+                                >
+                                                Name
+                                </Label>
+                                <input
+                                                className="form-control"
+                                                name="name"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                />
+                </FormGroup>
+</Col>,
+              "className": "form-group",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <FormGroup
+                  tag="div"
+>
+                  <Label
+                                    className="control-label"
+                                    tag="label"
+                                    widths={
+                                                      Array [
+                                                                        "xs",
+                                                                        "sm",
+                                                                        "md",
+                                                                        "lg",
+                                                                        "xl",
+                                                                      ]
+                                    }
+                  >
+                                    Name
+                  </Label>
+                  <input
+                                    className="form-control"
+                                    name="name"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                  />
+</FormGroup>,
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <Label
+                      className="control-label"
+                      tag="label"
+                      widths={
+                                            Array [
+                                                                  "xs",
+                                                                  "sm",
+                                                                  "md",
+                                                                  "lg",
+                                                                  "xl",
+                                                                ]
+                      }
+>
+                      Name
+</Label>,
+                    <input
+                      className="form-control"
+                      name="name"
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+/>,
+                  ],
+                  "tag": "div",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Name",
+                      "className": "control-label",
+                      "tag": "label",
+                      "widths": Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": "Name",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "form-control",
+                      "name": "name",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Col
+                tag="div"
+                widths={
+                                Array [
+                                                "xs",
+                                                "sm",
+                                                "md",
+                                                "lg",
+                                                "xl",
+                                              ]
+                }
+>
+                <FormGroup
+                                tag="div"
+                >
+                                <Label
+                                                className="control-label"
+                                                tag="label"
+                                                widths={
+                                                                Array [
+                                                                                "xs",
+                                                                                "sm",
+                                                                                "md",
+                                                                                "lg",
+                                                                                "xl",
+                                                                              ]
+                                                }
+                                >
+                                                Price
+                                </Label>
+                                <Input
+                                                className="form-control"
+                                                name="price"
+                                                onChange={[Function]}
+                                                type="number"
+                                                value=""
+                                />
+                                <FormText
+                                                color="muted"
+                                                tag="small"
+                                >
+                                                <p>
+                                                                Price is an Integer
+                                                </p>
+                                </FormText>
+                </FormGroup>
+</Col>,
+              "className": "form-group",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <FormGroup
+                  tag="div"
+>
+                  <Label
+                                    className="control-label"
+                                    tag="label"
+                                    widths={
+                                                      Array [
+                                                                        "xs",
+                                                                        "sm",
+                                                                        "md",
+                                                                        "lg",
+                                                                        "xl",
+                                                                      ]
+                                    }
+                  >
+                                    Price
+                  </Label>
+                  <Input
+                                    className="form-control"
+                                    name="price"
+                                    onChange={[Function]}
+                                    type="number"
+                                    value=""
+                  />
+                  <FormText
+                                    color="muted"
+                                    tag="small"
+                  >
+                                    <p>
+                                                      Price is an Integer
+                                    </p>
+                  </FormText>
+</FormGroup>,
+                "tag": "div",
+                "widths": Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <Label
+                      className="control-label"
+                      tag="label"
+                      widths={
+                                            Array [
+                                                                  "xs",
+                                                                  "sm",
+                                                                  "md",
+                                                                  "lg",
+                                                                  "xl",
+                                                                ]
+                      }
+>
+                      Price
+</Label>,
+                    <Input
+                      className="form-control"
+                      name="price"
+                      onChange={[Function]}
+                      type="number"
+                      value=""
+/>,
+                    <FormText
+                      color="muted"
+                      tag="small"
+>
+                      <p>
+                                            Price is an Integer
+                      </p>
+</FormText>,
+                  ],
+                  "tag": "div",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Price",
+                      "className": "control-label",
+                      "tag": "label",
+                      "widths": Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": "Price",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "className": "form-control",
+                      "name": "price",
+                      "onChange": [Function],
+                      "type": "number",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <p>
+                        Price is an Integer
+</p>,
+                      "color": "muted",
+                      "tag": "small",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Price is an Integer",
+                      },
+                      "ref": null,
+                      "rendered": "Price is an Integer",
+                      "type": "p",
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Button
+                className="btn btn-primary btn-success"
+                color="secondary"
+                tag="button"
+>
+                Add Meal
+</Button>,
+              "className": "form-group",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Add Meal",
+                "className": "btn btn-primary btn-success",
+                "color": "secondary",
+                "tag": "button",
+              },
+              "ref": null,
+              "rendered": "Add Meal",
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

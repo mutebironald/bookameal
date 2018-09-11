@@ -1,8 +1,9 @@
 import axios from 'axios';
+import instance from '../actions/instance';
 
 export function addMealRequest(data) {
     return function(dispatch){
-        return axios.post(`/api/v1/meals`, data, {headers:{"Authorization": localStorage.getItem('Authorization')}})
+        return instance.post(`/api/v1/meals`, data, {headers:{"Authorization": localStorage.getItem('Authorization')}})
         .then(response => {
             console.log(response.data)
             dispatch({ type: "ADD_MEAL", payload: data});

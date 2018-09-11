@@ -1,23 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { userLoginRequest } from '../../actions/userLoginRequest'
-import { FormErrors } from '../../FormErrors'
-import '../.././App.css'
-import '../.././index.css'
-
-import Notifications, {notify} from 'react-notify-toast';
+import Notifications, { notify } from 'react-notify-toast';
+import { connect } from 'react-redux';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reactstrap';
 import toastr from 'toastr';
-
-
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,NavLink,
-  } from 'reactstrap';
-
+import '../.././App.css';
+import '../.././index.css';
+import { userLoginRequest } from '../../actions/userLoginRequest';
 
 
     const selectedStyle = {
@@ -43,13 +32,13 @@ export class LoginForm extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
+        // console.log(this.props)
         let green = { background: 'green', text: "white" };
         notify.show("login", "custom", 1000, green)
     }
 
     componentWillMount(){
-        console.log("redux", this.props)
+        // console.log("redux", this.props)
     }
 
     onChange(event) {
@@ -100,8 +89,8 @@ export class LoginForm extends React.Component {
 
     onSubmit(event){
         event.preventDefault();
-        console.log("hello from login")
-        console.log(JSON.stringify(this.state));
+        // console.log("hello from login")
+        // console.log(JSON.stringify(this.state));
 
 
         this.props.userLoginRequest(this.state)

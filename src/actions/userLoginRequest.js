@@ -1,10 +1,11 @@
 import axios from 'axios';
+import instance from '../actions/instance';
 
 export function userLoginRequest(data) {
     return function(dispatch){
         console.log("Test Action")
 
-        return axios.post(`/auth/login`, data)
+        return instance.post(`/auth/login`, data)
         .then(res => {
 
             console.log("this is the response", res.data.access_token)

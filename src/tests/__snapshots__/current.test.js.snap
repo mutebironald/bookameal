@@ -3,7 +3,7 @@
 exports[`AdminDashboard component should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <current />,
+  Symbol(enzyme.__unrendered__): <getCurrentDay />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -12,25 +12,9 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {},
-    "ref": null,
-    "rendered": null,
-    "type": "current",
-  },
+  Symbol(enzyme.__node__): "Tuesday",
   Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {},
-      "ref": null,
-      "rendered": null,
-      "type": "current",
-    },
+    "Tuesday",
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {

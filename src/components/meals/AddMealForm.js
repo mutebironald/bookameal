@@ -1,4 +1,5 @@
 import axios from "axios";
+import instance from '../../actions/instance';
 import PropTypes from "prop-types";
 import React from "react";
 import Notifications, { notify } from "react-notify-toast";
@@ -17,7 +18,7 @@ import toastr from "toastr";
 import "../.././App.css";
 import { addMealRequest } from "../../actions/addMealRequest";
   
-class AddMealForm extends React.Component {
+export class AddMealForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,23 +48,20 @@ class AddMealForm extends React.Component {
         .then(response => {
           if (response.addMeal) {
             toastr.success(response.message);
-            axios
+            instance
               .get("/api/v1/meals")
             .then(response => {
-                console.log(response.data);
                 return response.data;
               })
                     .then(resData => {
                 let meals = resData.Meals;
                 this.setState({ meals: meals });
-                    
-                console.log("state", meals);
               });
           } else {
             toastr.warning(response.message);
                 }
             })
-        .then(axios.get("/api/v1/meals"));
+        .then(instance.get("/api/v1/meals"));
 
             this.setState({
         name: "",

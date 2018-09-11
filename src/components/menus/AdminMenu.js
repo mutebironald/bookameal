@@ -1,38 +1,17 @@
-import React, { Component } from 'react';
-
-import axios from 'axios'
-
-import { Button, Col,
-    Modal, ModalHeader, ModalBody,
-    } from 'reactstrap'
-
-import {
-        Collapse,
-        Navbar,
-        NavbarToggler,
-        NavbarBrand,
-        Nav,
-        NavLink
-        } from 'reactstrap';
-
-
-import '../.././index.css';
+import axios from 'axios';
+import instance from '../../actions/instance';
+import React from 'react';
+import { Button, Col, Collapse, Modal, ModalBody, ModalHeader, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reactstrap';
 import '../.././App.css';
-
-import GetMenuPage from './GetMenuPage';
-
-import CreateMenuPage from './CreateMenuPage'
-
-import getCurrentDay from '../current'
-
-import WeekDays from '../Weekdays'
+import '../.././index.css';
+import getCurrentDay from '../current';
+import WeekDays from '../Weekdays';
+import CreateMenuPage from './CreateMenuPage';
 
 const selectedStyle = {
     backgroundColor: "white",
     color: "slategasy"
   }
-
-const today = getCurrentDay();
 
 class AdminMenu extends React.Component {
     constructor(props){
@@ -40,7 +19,6 @@ class AdminMenu extends React.Component {
         this.state = {
             menus: [],
             modal: false,
-            // today: '',
             currentMenu: {
                 day: "",
                 meals: []
@@ -52,25 +30,18 @@ class AdminMenu extends React.Component {
         };
 
 
-
     getMenus = () => {
-        console.log("getMenus", axios.get(`api/v1/menu` , {headers:{"Authorization": localStorage.getItem('Authorization')}}))
-        axios.get(`api/v1/menu`, {headers:{"Authorization": localStorage.getItem('Authorization')}})
+        instance.get(`api/v1/menu`, {headers:{"Authorization": localStorage.getItem('Authorization')}})
         .then(response => {
-            console.log("this getMenus response",today, response.data.Menu,"hererea", response.data.Menu.find(
-              menu => today === menu.day
-            ))
             const today = getCurrentDay();
-            console.log("magicmarie",response.data.Menu.day)
+            
             const currentMenu = response.data.Menu.find(
              menu => today.toLowerCase() === menu.day
             );
-            console.log("current menu" , currentMenu)
             this.setState({
               menus: response.data.Menu,
               currentMenu
             });
-            console.log("this is your state",currentMenu)
           })
         }
 
@@ -78,17 +49,12 @@ class AdminMenu extends React.Component {
         day = day.charAt(0).toUpperCase() + day.slice(1);
         const { menus } = this.state;
         const currentMenu = menus.find(menu => day.toLowerCase() === menu.day);
-        console.log("At this point debugging kicks in", currentMenu)
         this.setState({ currentDay: day.toLowerCase(), currentMenu: currentMenu });
-        console.log("howday this is our current day", day, "menu", this.state)
     };
-
 
     componentDidMount() {
         this.getMenus();
-      }
-
-    
+      }  
 
     toggle(){
         this.setState({
@@ -100,7 +66,6 @@ class AdminMenu extends React.Component {
         const  currentMenu = this.state.currentMenu;
 
         if(currentMenu.meals.length === undefined){
-            console.log("we are here",currentMenu.meals)
             return (
                 <div>
                <h2 class="text-white">No meals in menu</h2>
@@ -141,7 +106,6 @@ class AdminMenu extends React.Component {
                     <WeekDays getMenu={this.getMenu} />
                 </ul>
                 </div>
-                {/* </div> */}
                 
             {currentMenu.meals.map((menu) =>
                 
@@ -156,9 +120,6 @@ class AdminMenu extends React.Component {
                     <strong>Price:</strong>{menu.price}
                 </div>
 
-                {/* <div className="col-md-8 meal-data text-center">
-                    <strong>Day:</strong>{menu.day}
-                </div> */}
                 </div>
                                    
                 </div>

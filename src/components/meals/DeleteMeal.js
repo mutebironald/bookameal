@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../../App.css';
+import instance from '../../actions/instance';
 
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -8,7 +9,7 @@ import Notifications, {notify} from 'react-notify-toast';
 import toastr from 'toastr';
 
 
-class DeleteMeal extends React.Component {
+export class DeleteMeal extends React.Component {
     constructor(props){
         super(props)
         this.handleChange = this.handleChange.bind(this);
@@ -18,23 +19,14 @@ class DeleteMeal extends React.Component {
         }
     }
 
-    componentWillMount(){
-        console.log("lappppp")
-        console.log(this.props)
-    }
-
-    handleChange(e) {
-    e.preventDefault();
+    handleChange = (e) =>{
     this.setState({ [e.target.name]: e.target.value});
-    console.log("job")
 }
 
 
     onSubmit(e){
     e.preventDefault();
     if (this.state.meal_id.trim() ){
-        console.log(this.state);
-        // console.log(this.props)
     this.props.deleteMealRequest(this.state.meal_id)
     .then(response => {
         if(response.deletedMeal){
@@ -60,9 +52,6 @@ componentDidMount(){
 
 delete(e, index){
     e.preventDefault();
-    console.log("wewewewewewewe")
-    console.log(this.props.id)
-    // this.props.delete(index);
     }
 
     render(){

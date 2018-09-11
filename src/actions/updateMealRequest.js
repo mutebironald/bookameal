@@ -1,9 +1,10 @@
 import axios from "axios";
+import instance from '../actions/instance';
 
 export function updateMealRequest(id, data){
     return function(dispatch){
 
-    return axios.put("/api/v1/meals/" + id, data)
+    return instance.put("/api/v1/meals/" + id, data)
     .then(response =>{
         console.log(response)
         dispatch({ type: "UPDATE_MEAL", payload: data, id});

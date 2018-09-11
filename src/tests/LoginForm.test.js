@@ -1,40 +1,50 @@
 import React from "react";
-import { MemoryRouter } from "react-router-dom";
 import {LoginForm } from "../components/users/LoginForm";
+const fn =  () => Promise.resolve({})
+
+// function setUp(){
+//   const props ={
+//     userLoginRequest: ()=>{},
+//     loginData: ''
+//   };
+//   return shallow(<LoginForm userLoginRequest={jest.fn()} loginData={""}/>)
+// }
+
 
 describe("Login Component", () => {
-  const wrapper = shallow(<MemoryRouter>LoginForm</MemoryRouter>);
+  let wrapper;
+  beforeEach(()=>{
+    wrapper = shallow(<LoginForm userLoginRequest ={fn}/>);
+  })
   it("Test it mounts correctly", () => {
     expect(wrapper).toHaveLength(1);
   });
 
- 
+  it("component has divs", () => {
+    expect( wrapper.find("div").length).toBe(7);
+  })
 
-
-  it("should set a new values on value change ", () => {
-    const loginData = {
-      email: "j@gmail.com",
-      password: "Januzaj44#"
-    };
-    const props = {
-      userLoginRequest: () => {},
+  it("should handle change", () => {
+    const event = {
+        target: {
+            name: "name",
+            value: "test"
+        }
     }
-    const wrapper = shallow(<MemoryRouter><LoginForm {...props} /></MemoryRouter>);
-    const loginComponent = wrapper.find("form")
-    let username = wrapper.find('.login-input').first();
-    username.simulate("change", {
-      target: { name: "username", value: "Roninho"}
 
-    });
-    let password = loginComponent.find('input').first();
-    password.simulate("change", {
-    target: { name: "password", value: "Unhackable1" }
-    });
+    wrapper.instance().onChange(event);
+    expect(wrapper.instance().state.name).toEqual("test")
+});
 
-        
-    })
-  
+it("should submit", () => {
+  const mockFn = jest.fn()
+    const evt = {
+        preventDefault: mockFn
+    }
+    wrapper.instance().onSubmit(evt);
+    expect(mockFn.mock.calls.length).toBe(1);
 
+});
 
-  });
+});
 

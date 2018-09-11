@@ -1,16 +1,37 @@
-import React from 'react';
-import AdminMenu from '../../components/menus/AdminMenu';
-import { MemoryRouter } from 'react-router-dom';
+// import React from 'react';
+// import AdminMenu from '../../components/menus/AdminMenu';
+// import MockAdapter from 'axios-mock-adapter';
 
-describe("Admin Menu component", () => {
-    let wrapper;
-    let mockFn;
-    beforeEach(() => {
-        mockFn = jest.fn();
-        wrapper = shallow(<MemoryRouter><AdminMenu/></MemoryRouter>)
-    });
+// describe("Defines the tests for AdminMenu component", () => {
+//     let wrapper;
+//     let mockFn;
+//     let data;
+//     beforeEach(() => {
 
-    it("renders successfully", () => {
-        expect(wrapper).toHaveLength(1);
-    });
-});
+//         data = {
+//             Menu: [
+//                 {
+//                     "day": "monday",
+//                     "meals": [
+//                         {
+//                             "id": 3,
+//                             "name": "Rice with pilao",
+//                             "price": 3400
+//                         }
+//                     ]
+//                 }
+//             ]},
+
+
+
+//         mockFn = jest.fn();
+//         const mock = new MockAdapter(axios);
+//         mock.onGet("api/v1/menu").reply(200, {
+//             Menu: data
+//         });
+//         wrapper = shallow(<AdminMenu  className=""/>)
+//     });
+//     it("renders successfully", () => {
+//         expect(wrapper).toHaveLength(1);
+//     })
+// })

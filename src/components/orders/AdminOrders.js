@@ -1,32 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Collapse, Modal, ModalBody, ModalFooter, ModalHeader, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reactstrap';
 import '../.././index.css';
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
-
-import CreateOrder from './CreateOrder';
-import axios from 'axios'
-
+import instance from '../../actions/instance';
 import GetCustomerHistory from './GetCustomerHistory';
-
-import {
-        Modal, ModalHeader,
-        ModalBody,
-        ModalFooter,
-        Collapse,
-        Navbar,
-        NavbarToggler,
-        NavbarBrand,
-        Nav,
-        NavLink
-        } from 'reactstrap';
-
-
 const selectedStyle = {
         backgroundColor: "white",
         color: "slategasy"
       }
 
 
-class AdminOrders extends React.Component {
+export class AdminOrders extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -39,13 +22,11 @@ class AdminOrders extends React.Component {
         };
 
     componentDidMount(){
-        fetch('/api/v1/orders')
-        .then(response => response.json())
-        .then(resData => {
-
-            let meals = resData
+        instance.get('/api/v1/orders')
+        .then(res => {
+            console.log("res is here", res)
+            let meals = res.data
            this.setState({ orderMeals: meals });
-           console.log(this.state)
         })
     };
 
@@ -119,7 +100,6 @@ class AdminOrders extends React.Component {
             {/* <button onClick={() => this.resetOrder()} className="btn btn-primary">Close</button> */}
         </ModalFooter>
         </Modal>
-
 
 
 

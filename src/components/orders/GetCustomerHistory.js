@@ -2,6 +2,7 @@ import React from 'react';
 import '../.././index.css';
 
 import axios from 'axios'
+import instance from '../../actions/instance';
 import { Card, Button, CardTitle, CardText } from 'reactstrap';
 
 import getOrderHistoryRequest from '../../actions/getOrderHistoryRequest';
@@ -13,17 +14,6 @@ class GetOrderHistory extends React.Component{
             order: []
         }
     }
-    
-    // componentDidMount(data){
-    //     console.log(this.state)
-    //     axios.get(`api/v1/orders/`,data, {headers:{"Authorization": localStorage.getItem('Authorization')}})
-    //     .then(res => res)
-    //     .then(resData => {
-    //         let meals = resData
-    //         this.setState({order: meals });
-    //     })
-    // };
-    // this.props.getOrderHistoryRequest(this.state)
 
     componentWillMount(){
         console.log(this.state)

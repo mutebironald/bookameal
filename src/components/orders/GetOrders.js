@@ -1,20 +1,7 @@
 import React from 'react';
+import { Button, Card, CardText, CardTitle, Collapse, Modal, ModalBody, ModalHeader, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reactstrap';
 import '../.././index.css';
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
-
 import CreateOrder from './CreateOrder';
-
-import { Modal, ModalHeader, ModalBody} from 'reactstrap'
-
-import {
-        Collapse,
-        Navbar,
-        NavbarToggler,
-        NavbarBrand,
-        Nav,
-        NavLink,
-        } from 'reactstrap';
-
 
 const selectedStyle = {
         backgroundColor: "white",
