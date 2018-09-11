@@ -1,4 +1,6 @@
-[![Coverage Status](https://coveralls.io/repos/github/mutebironald4/bookameal/badge.svg?branch=ft-get-meals-159765172)](https://coveralls.io/github/mutebironald4/bookameal?branch=ft-get-meals-159765172)
+[![Coverage Status](https://coveralls.io/repos/github/mutebironald4/bookameal/badge.svg?branch=ft-get-meals-159765172)](https://coveralls.io/github/mutebironald4/bookameal?branch=develop)
+
+
 
 # bookameal-react-frontend
 
