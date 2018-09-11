@@ -7,10 +7,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { getAllMeals } from "./actions";
 import "./App.css";
 import Whoops404 from "./components/./Whoops404";
-import home from "./components/home/home";
-import LandingPage from "./components/LandingPage";
 import AddMealForm from "./components/meals/AddMealForm";
-import AddMealModal from "./components/meals/AddMealModal";
 import DeleteMeal from "./components/meals/DeleteMeal";
 import GetMeals from "./components/meals/GetMeals";
 import Meal from "./components/meals/Meal";
@@ -23,8 +20,6 @@ import AdminOrders from "./components/orders/AdminOrders";
 import CreateOrder from "./components/orders/CreateOrder";
 import GetOrderHistory from "./components/orders/GetOrderHistory";
 import GetOrders from "./components/orders/GetOrders";
-import trand from "./components/trand";
-import trial from "./components/trial";
 import AdminLoginForm from "./components/users/AdminLoginForm";
 import AdminSignupForm from "./components/users/AdminSignupForm";
 import LoginForm from "./components/users/LoginForm";
@@ -53,7 +48,6 @@ class App extends React.Component {
   }
 
   toggle() {
-    <AddMealModal />;
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -63,7 +57,6 @@ class App extends React.Component {
     const supportsHistory = "pushState" in window.history;
 
     return (
-      // <ThemeProvider theme={{ color_themePrimary: 'dusk' }}>
       <Provider store={store}>
         <Router history={history} forceRefresh={supportsHistory}>
           <Switch>
@@ -73,14 +66,11 @@ class App extends React.Component {
             <Route path="/addMeal" component={AddMealForm} />
             <Route path="/updateMeal" component={UpdateMealForm} />
             <Route path="/getMeals" component={GetMeals} />
-            {/* <Route path="/get" component={GetMealPage}/> */}
             <Route path="/deleteMeal" component={DeleteMeal} />
             <Route path="/getMenu" component={GetMenu} />
             <Route path="/createMenu" component={CreateMenuPage} />
             <Route path="/createOrder" component={CreateOrder} />
             <Route path="/getOrder" component={GetOrders} />
-            <Route path="/test" component={trial} />
-            <Route path="/home" component={home} />
             <Route path="/Meal" component={Meal} />
             <Route path="/userMenu" component={UserMenu} />
             <Route path="/adminOrders" component={AdminOrders} />
@@ -89,14 +79,11 @@ class App extends React.Component {
             <Route path="/adminlogin" component={AdminLoginForm} />
             <Route path="/adminregister" component={AdminSignupForm} />
 
-            <Route path="/day" component={LandingPage} />
-            <Route path="/now" component={trand} />
             <Route path="/history" component={GetOrderHistory} />
             <Route component={Whoops404} />
           </Switch>
         </Router>
       </Provider>
-      // </ThemeProvider>
     );
   }
 }
