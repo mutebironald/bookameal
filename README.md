@@ -27,8 +27,8 @@ Tools used for development of this client are;
 ## How to set up?
 - Create a directory and change to that directory
 ```sh
-  > mkdir bookameal-react-frontend
-  > cd bookameal-react-frontend
+  > mkdir bookameal
+  > cd bookameal
 ```
 - Clone this repository.
 ```sh
@@ -36,7 +36,7 @@ Tools used for development of this client are;
 ```
 - Install the required dependencies.
 ```sh
-> cd bookameal-react-frontend
+> cd bookameal
 > npm install
 ```
 - Run the application.
