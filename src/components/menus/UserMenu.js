@@ -8,7 +8,6 @@ import GetOrderHistory from '../orders/GetOrderHistory';
 import WeekDays from '../Weekdays';
 
 
-
 const selectedStyle = {
     backgroundColor: "white",
     color: "slategasy"
@@ -32,7 +31,7 @@ class UserMenu extends React.Component {
 
     getMenus = day => {
         instance.get(`api/v1/menu/caterer/${day}`)
-        .then(response => { console.log("here -------- response", response.data.Menu);
+        .then(response => {
          return response.data.Menu })
         .then(menu => {
             let meals = menu
@@ -58,7 +57,6 @@ class UserMenu extends React.Component {
       };
 
     getMenu = day =>{
-        console.log("my state today", this.state)
         day = day.charAt(0).toUpperCase() + day.slice(1);
         const { menu } = this.state;
         this.setState({ currentDay:day , menu: [menu]});
@@ -67,10 +65,8 @@ class UserMenu extends React.Component {
     componentDidMount(){
         
         const today = this.getCurrentDay();
-        console.log("today h-----", today, typeof today, this.getMenus(today.toLowerCase()))
         this.getMenus(today.toLowerCase());
         this.setState({today});
-        console.log(this.state, "componentWillMount")
     }
 
     toggle(){
@@ -89,7 +85,6 @@ class UserMenu extends React.Component {
 
         instance.post(`/api/v1/orders`, id)
         .then(response => {
-            console.log("response", response.data)
             dispatchEvent({ type: "ADD_ORDER", payload: id});
         })
         .catch(error => {
@@ -100,7 +95,6 @@ class UserMenu extends React.Component {
     }
 
     toggle1(id){
-        console.log(id, "my id")
         this.setState({
             modal1: !this.state.modal1,
             id: id
@@ -126,7 +120,6 @@ class UserMenu extends React.Component {
         const  menu = this.state;
 
         if(menu === undefined){
-            console.log(menu.menu, "line 155")
             return (
                 <div>
                <h2 class="text-white">No meals in menu</h2>
