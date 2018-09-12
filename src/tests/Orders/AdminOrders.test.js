@@ -6,11 +6,12 @@ import axiosInstance from '../../actions/instance';
 
 describe("Admin Order component", () => {
     let wrapper;
-    let mockFn;
+    let mock;
+    
     beforeEach(() => {
-        // var axiosMock = MockAdapter(axiosInstance)
+        // const mock = MockAdapter(axiosInstance)
         // mockFn = jest.fn();
-        // wrapper = shallow(<AdminOrders/>)
+         wrapper = shallow(<AdminOrders/>)
     });
 
 
