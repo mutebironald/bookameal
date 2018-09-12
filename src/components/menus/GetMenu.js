@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import axios from 'axios'
 import instance from '../../actions/instance';
 
 import { Badge, Button, Col,
@@ -26,9 +24,6 @@ import {
 
 import '../.././index.css';
 import '../.././App.css';
-
-import GetMenuPage from './GetMenuPage';
-
 import CreateMenuPage from './CreateMenuPage'
 
 const selectedStyle = {
@@ -36,7 +31,7 @@ const selectedStyle = {
     color: "slategasy"
   }
 
-class GetMenu extends React.Component {
+export class GetMenu extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -53,8 +48,6 @@ class GetMenu extends React.Component {
 
             let meals = resData
            this.setState({ menuMeals: meals });
-           console.log("Menu-state",this.state)
-           console.log("hshdgd---")
         })
     };
 
@@ -68,7 +61,6 @@ class GetMenu extends React.Component {
         const  menu = this.state;
 
         if(menu.menuMeals === undefined){
-            console.log(menu)
             return (
                 <div>
                <h2 class="text-white">No meals in menu</h2>
