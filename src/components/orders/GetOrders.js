@@ -25,14 +25,8 @@ class GetOrders extends React.Component {
 
             let meals = resData
            this.setState({ orderMeals: meals });
-           console.log("hammingly wathonic",this.state)
         })
     };
-
-    componentWillMount(){
-        // console.log("gvduidwfghjf")
-        console.log(this.state)
-    }
 
     toggle(){
         this.setState({
@@ -44,7 +38,6 @@ class GetOrders extends React.Component {
         const  order = this.state;
 
         if(order.orderMeals === undefined){
-            console.log(order)
             return (
                 <div>
                <h2 class="text-white">No orders yet</h2>
@@ -100,20 +93,6 @@ class GetOrders extends React.Component {
                     </Collapse>
                 </Navbar>
                 {this.returnOrder()}
-
-                
-
-                    {/* <Button className="btn btn-success btn-sm" onClick={this.toggle} style={{ width: "4rem", height:"2rem"}}>Add</Button>
-                    <Modal isOpen={this.state.modal} backdropTransition={{ timeout: 1300 }}
-                    toggle={this.toggle} className={this.props.className}>
-                        <ModalHeader toggle={this.toggle}>Menu</ModalHeader>
-                        <ModalBody>
-                            <CreateOrder/>      
-                        </ModalBody>
-                    </Modal> */}
-
-
-
                 
 
             </div>
