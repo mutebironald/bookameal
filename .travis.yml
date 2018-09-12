@@ -6,7 +6,6 @@ cache:
     - node_modules
 script:
   - npm test
-  - CI=false npm run build
 
-on:
-  branch: develop
+after_script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
