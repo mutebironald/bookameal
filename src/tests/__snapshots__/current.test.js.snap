@@ -12,9 +12,9 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): "Tuesday",
+  Symbol(enzyme.__node__): "Wednesday",
   Symbol(enzyme.__nodes__): Array [
-    "Tuesday",
+    "Wednesday",
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
