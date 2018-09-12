@@ -24,15 +24,10 @@ export class AdminOrders extends React.Component {
     componentDidMount(){
         instance.get('/api/v1/orders')
         .then(res => {
-            console.log("res is here", res)
             let meals = res.data
            this.setState({ orderMeals: meals });
         })
     };
-
-    componentWillMount(){
-        console.log(this.state)
-    }
 
     toggle(){
         this.setState({
@@ -44,14 +39,13 @@ export class AdminOrders extends React.Component {
         this.setState({
             modal1: !this.state.modal1
         })
-        console.log(this.state)
     }
 
     returnOrder = () =>{
         const  order = this.state;
 
         if(order.orderMeals === undefined){
-            console.log(order)
+            
             return (
                 <div>
                <h2 class="text-white">No orders yet</h2>
@@ -93,11 +87,9 @@ export class AdminOrders extends React.Component {
         toggle={this.toggle1} className={this.props.className}>
         <ModalHeader toggle={this.toggle1} class="modal">History</ModalHeader>
         <ModalBody class="modal-main">
-            {/* <CreateOrder id={this.state.id} toggle={this.toggle1.bind(this)}/> */}
             <GetCustomerHistory />
         </ModalBody>
         <ModalFooter>
-            {/* <button onClick={() => this.resetOrder()} className="btn btn-primary">Close</button> */}
         </ModalFooter>
         </Modal>
 

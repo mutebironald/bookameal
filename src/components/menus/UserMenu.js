@@ -126,7 +126,6 @@ class UserMenu extends React.Component {
                 </div>
             );
         }else {
-            console.log(menu.menu, "-----------treasonous banana")
            return (
 
             <div class="text-center" >

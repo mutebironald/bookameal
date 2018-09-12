@@ -2,7 +2,7 @@ import axios from 'axios'
 import instance from '../actions/instance';
 
 
-export function deleteMealRequest(meal_id){
+export default function deleteMealRequest(meal_id){
     console.log("you are deleting")
     
     return function(dispatch){

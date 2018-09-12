@@ -1,7 +1,7 @@
 import axios from 'axios';
 import instance from '../actions/instance';
 
-export function userSignupRequest(data){
+export default function userSignupRequest(data){
     return function(dispatch){
         return instance.post(`/auth/register`, data)
         .then(response => {

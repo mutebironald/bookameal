@@ -1,7 +1,7 @@
 import axios from 'axios';
 import instance from '../actions/instance';
 
-export function adminSignupRequest(data){
+export default function adminSignupRequest(data){
     return function(dispatch){
         return instance.post(`/auth/admin/register`, data)
         .then(response => {

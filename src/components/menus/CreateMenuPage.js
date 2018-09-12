@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import CreateMenu from "./CreateMenu";
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import { addMealRequest } from '../../actions/addMealRequest';  
+import  addMealRequest  from '../../actions/addMealRequest';  
 
 export class AddMenuPage extends Component{
     render(){

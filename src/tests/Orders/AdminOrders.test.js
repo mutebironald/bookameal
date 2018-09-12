@@ -1,41 +1,37 @@
-import MockAdapter from 'axios-mock-adapter';
 import React from 'react';
 import { AdminOrders } from '../../components/orders/AdminOrders';
-import axiosInstance from '../../actions/instance';
 
 
 describe("Admin Order component", () => {
     let wrapper;
-    let mock;
-    
+    let mockFn;
     beforeEach(() => {
-        // const mock = MockAdapter(axiosInstance)
-        // mockFn = jest.fn();
-         wrapper = shallow(<AdminOrders/>)
+        mockFn = jest.fn();
+        wrapper = shallow(<AdminOrders/>)
+    });
+    
+
+    it("should render correctly", ()=> {
+        expect(wrapper).toMatchSnapshot();
     });
 
 
-    it("should handle change", () => {
-        // const event = {
-        //     target: {
-        //         name: "name",
-        //         value: "test"
-        //     }
-        // }
-
-        // wrapper.instance().onChange(event);
-        // expect(wrapper.instance().state.name).toEqual("test")
+    it('should toggle', () => {
+        const {
+            modal
+        } =  wrapper.instance().state;
+        wrapper.instance().toggle()
+        expect(wrapper.instance().state.modal).toEqual(modal);
     });
 
 
-    // it("should submit", () => {
-    //     const evt = {
-    //         preventDefault: mockFn
-    //     }
-    //     wrapper.instance().onSubmit(evt);
-    //     expect(mockFn.mock.calls.length).toBe(1);
+    it('should handle toggle2', () => {
+        const {
+            modal1
+        } =  wrapper.instance().state;
+        wrapper.instance().toggle1()
+        expect(wrapper.instance().state.modal1).toEqual(!modal1);
 
-    // });
-
+    });
 
 });

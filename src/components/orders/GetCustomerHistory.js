@@ -1,11 +1,6 @@
 import React from 'react';
 import '../.././index.css';
-
-import axios from 'axios'
-import instance from '../../actions/instance';
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
-
-import getOrderHistoryRequest from '../../actions/getOrderHistoryRequest';
+import { Card, CardTitle, CardText } from 'reactstrap';
 
 class GetOrderHistory extends React.Component{
     constructor(props){
@@ -14,19 +9,9 @@ class GetOrderHistory extends React.Component{
             order: []
         }
     }
-
-    componentWillMount(){
-        console.log(this.state)
-    }
-
     returnOrder = () => {
         const order = this.state.order;
-        console.log("your decider",order)
-        console.log("my state now over run", order)
-
         if(order.data === undefined){
-            console.log(this.state)
-            console.log("boolean",typeof order.orderMeals === undefined)
             return (
                 <div>
                     <h2 class="text-white">No orders yet</h2>

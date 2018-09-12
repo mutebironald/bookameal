@@ -1,18 +1,16 @@
-// import React from 'react';
-// import GetOrderHistory from '../../components/orders/GetOrderHistory';
-// import { MemoryRouter } from 'react-router-dom';
+import React from 'react';
+import { GetOrderHistory } from '../../components/orders/GetOrderHistory';
 
-// describe("Get Order History", () => {
-//     let wrapper;
-//     let mockFn;
-//     beforeEach(() => {
-//         mockFn = jest.fn();
-//         wrapper = shallow(<MemoryRouter><GetOrderHistory/></MemoryRouter>)
-//     });
+describe("Get order history", () => {
+    let wrapper;
+    let mockFn;
+    beforeEach(() => {
+        wrapper = shallow(<GetOrderHistory/>)
+    });
 
-//     it("renders successfully", () => {
-//         expect(wrapper).toHaveLength(1);
-//     });
+    it("should render correctly", ()=> {
+        expect(wrapper).toMatchSnapshot();
+    });
 
 
-// });
+})

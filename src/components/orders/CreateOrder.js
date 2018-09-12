@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import "../.././App.css"
 
-import { addOrderRequest } from '../../actions/addOrderRequest';
+import  addOrderRequest  from '../../actions/addOrderRequest';
 
 import Notifications, {notify} from 'react-notify-toast';
 import toastr from 'toastr';
 
-class CreateOrder extends React.Component {
+export class CreateOrder extends React.Component {
     constructor(props){
     super(props);
     this.state = {
@@ -21,8 +21,6 @@ class CreateOrder extends React.Component {
 
     onChange(event) {
         this.setState({ [event.target.name]: event.target.value});
-        console.log(event.target.plant)
-
     }
 
     onSubmit(event){
@@ -41,12 +39,6 @@ class CreateOrder extends React.Component {
                     toastr.error(response.message)
                 }
             })
-            
-            // this.props.toggle(this.state.menu_id)
-            console.log("here i am",this.props)
-        
-        
-
 
         this.setState({
             menu_id: ''

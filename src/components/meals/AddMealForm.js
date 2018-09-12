@@ -16,7 +16,7 @@ import {
 } from "reactstrap";
 import toastr from "toastr";
 import "../.././App.css";
-import { addMealRequest } from "../../actions/addMealRequest";
+import addMealRequest  from "../../actions/addMealRequest";
   
 export class AddMealForm extends React.Component {
   constructor(props) {

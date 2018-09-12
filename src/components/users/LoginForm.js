@@ -6,7 +6,7 @@ import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reac
 import toastr from 'toastr';
 import '../.././App.css';
 import '../.././index.css';
-import { userLoginRequest } from '../../actions/userLoginRequest';
+import  userLoginRequest  from '../../actions/userLoginRequest';
 
 
     const selectedStyle = {

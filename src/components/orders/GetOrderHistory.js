@@ -3,7 +3,7 @@ import { Card, CardText } from 'reactstrap';
 import '../.././index.css';
 import instance from '../../actions/instance';
 
-class GetOrderHistory extends React.Component{
+export class GetOrderHistory extends React.Component{
     constructor(props){
         super(props);
         this.state ={

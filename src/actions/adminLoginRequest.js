@@ -1,7 +1,7 @@
 import axios from 'axios';
 import instance from '../actions/instance';
 
-export function adminLoginRequest(data){
+export  default function adminLoginRequest(data){
     return function(dispatch){
         console.log("This is an Administrator", data)
         console.log(instance.post(`/auth/admin/login`, data))
@@ -19,7 +19,6 @@ export function adminLoginRequest(data){
             return {loggedIn: true, message: res.data.message, admin: res.data.admin};
         })
         .catch(error =>{
-            console.log("errors", error);
             return {loggedIn: false, message: "Please Signup then login", admin: "False"};
         })
     }

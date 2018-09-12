@@ -1,7 +1,7 @@
 import axios from 'axios';
 import instance from '../actions/instance';
 
-export function userLoginRequest(data) {
+export default function userLoginRequest(data) {
     return function(dispatch){
         console.log("Test Action")
 

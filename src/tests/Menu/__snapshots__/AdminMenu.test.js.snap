@@ -1,0 +1,2427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Menu component renders successfully snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AdminMenu
+    className=""
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <Col
+        tag="div"
+        widths={
+                Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+        }
+>
+        <div>
+                <Navbar
+                        color="success"
+                        expand="md"
+                        light={true}
+                        tag="nav"
+                >
+                        <NavbarBrand
+                                href="/"
+                                tag="a"
+                        >
+                                Book-A-Meal | Home 
+                        </NavbarBrand>
+                        <NavbarToggler
+                                onClick={[Function]}
+                                tag="button"
+                                type="button"
+                        />
+                        <Collapse
+                                appear={false}
+                                enter={true}
+                                exit={true}
+                                in={false}
+                                isOpen={false}
+                                mountOnEnter={false}
+                                navbar={true}
+                                onEnter={[Function]}
+                                onEntered={[Function]}
+                                onEntering={[Function]}
+                                onExit={[Function]}
+                                onExited={[Function]}
+                                onExiting={[Function]}
+                                tag="div"
+                                timeout={350}
+                                unmountOnExit={false}
+                        >
+                                <Nav
+                                        className="ml-auto"
+                                        navbar={true}
+                                        tag="ul"
+                                        vertical={false}
+                                >
+                                        <NavLink
+                                                activeStyle={
+                                                        Object {
+                                                                "backgroundColor": "white",
+                                                                "color": "slategasy",
+                                                              }
+                                                }
+                                                href="/getMeals"
+                                                tag="a"
+                                        >
+                                                Meals
+                                        </NavLink>
+                                        <NavLink
+                                                activeStyle={
+                                                        Object {
+                                                                "backgroundColor": "white",
+                                                                "color": "slategasy",
+                                                              }
+                                                }
+                                                href="/adminMenu"
+                                                tag="a"
+                                        >
+                                                Menu
+                                        </NavLink>
+                                        <NavLink
+                                                activeStyle={
+                                                        Object {
+                                                                "backgroundColor": "white",
+                                                                "color": "slategasy",
+                                                              }
+                                                }
+                                                href="/adminOrders"
+                                                tag="a"
+                                        >
+                                                Orders
+                                        </NavLink>
+                                        <NavLink
+                                                activeStyle={
+                                                        Object {
+                                                                "backgroundColor": "white",
+                                                                "color": "slategasy",
+                                                              }
+                                                }
+                                                href="/adminlogin"
+                                                tag="a"
+                                        >
+                                                Logout
+                                        </NavLink>
+                                </Nav>
+                        </Collapse>
+                </Navbar>
+                <button
+                        className="btn btn-success btn-sm"
+                        onClick={[Function]}
+                        style={
+                                Object {
+                                        "height": "2rem",
+                                        "margin": "10px",
+                                        "width": "4rem",
+                                      }
+                        }
+                >
+                        Add
+                </button>
+                <div
+                        className="row"
+                >
+                        <div
+                                className="col-md-2"
+                        >
+                                <div
+                                        className="header text-center"
+                                        style={
+                                                Object {
+                                                        "margin": "5px",
+                                                      }
+                                        }
+                                >
+                                        <strong>
+                                                <h3>
+                                                        Weekday
+                                                </h3>
+                                        </strong>
+                                </div>
+                                <ul
+                                        className="list-group"
+                                >
+                                        <Days
+                                                getMenu={[Function]}
+                                        />
+                                </ul>
+                        </div>
+                        <Modal
+                                autoFocus={true}
+                                backdrop={true}
+                                backdropTransition={
+                                        Object {
+                                                "timeout": 1300,
+                                              }
+                                }
+                                centered={false}
+                                className=""
+                                fade={true}
+                                isOpen={false}
+                                keyboard={true}
+                                modalTransition={
+                                        Object {
+                                                "timeout": 300,
+                                              }
+                                }
+                                onClosed={[Function]}
+                                onOpened={[Function]}
+                                role="dialog"
+                                toggle={[Function]}
+                                zIndex={1050}
+                        >
+                                <ModalHeader
+                                        charCode={215}
+                                        closeAriaLabel="Close"
+                                        tag="h5"
+                                        toggle={[Function]}
+                                        wrapTag="div"
+                                >
+                                        Menu
+                                </ModalHeader>
+                                <ModalBody
+                                        tag="div"
+                                >
+                                        <Connect(AddMenuPage) />
+                                </ModalBody>
+                        </Modal>
+                </div>
+        </div>
+</Col>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <div>
+          <Navbar
+                    color="success"
+                    expand="md"
+                    light={true}
+                    tag="nav"
+          >
+                    <NavbarBrand
+                              href="/"
+                              tag="a"
+                    >
+                              Book-A-Meal | Home 
+                    </NavbarBrand>
+                    <NavbarToggler
+                              onClick={[Function]}
+                              tag="button"
+                              type="button"
+                    />
+                    <Collapse
+                              appear={false}
+                              enter={true}
+                              exit={true}
+                              in={false}
+                              isOpen={false}
+                              mountOnEnter={false}
+                              navbar={true}
+                              onEnter={[Function]}
+                              onEntered={[Function]}
+                              onEntering={[Function]}
+                              onExit={[Function]}
+                              onExited={[Function]}
+                              onExiting={[Function]}
+                              tag="div"
+                              timeout={350}
+                              unmountOnExit={false}
+                    >
+                              <Nav
+                                        className="ml-auto"
+                                        navbar={true}
+                                        tag="ul"
+                                        vertical={false}
+                              >
+                                        <NavLink
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "white",
+                                                                      "color": "slategasy",
+                                                                    }
+                                                  }
+                                                  href="/getMeals"
+                                                  tag="a"
+                                        >
+                                                  Meals
+                                        </NavLink>
+                                        <NavLink
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "white",
+                                                                      "color": "slategasy",
+                                                                    }
+                                                  }
+                                                  href="/adminMenu"
+                                                  tag="a"
+                                        >
+                                                  Menu
+                                        </NavLink>
+                                        <NavLink
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "white",
+                                                                      "color": "slategasy",
+                                                                    }
+                                                  }
+                                                  href="/adminOrders"
+                                                  tag="a"
+                                        >
+                                                  Orders
+                                        </NavLink>
+                                        <NavLink
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "white",
+                                                                      "color": "slategasy",
+                                                                    }
+                                                  }
+                                                  href="/adminlogin"
+                                                  tag="a"
+                                        >
+                                                  Logout
+                                        </NavLink>
+                              </Nav>
+                    </Collapse>
+          </Navbar>
+          <button
+                    className="btn btn-success btn-sm"
+                    onClick={[Function]}
+                    style={
+                              Object {
+                                        "height": "2rem",
+                                        "margin": "10px",
+                                        "width": "4rem",
+                                      }
+                    }
+          >
+                    Add
+          </button>
+          <div
+                    className="row"
+          >
+                    <div
+                              className="col-md-2"
+                    >
+                              <div
+                                        className="header text-center"
+                                        style={
+                                                  Object {
+                                                            "margin": "5px",
+                                                          }
+                                        }
+                              >
+                                        <strong>
+                                                  <h3>
+                                                            Weekday
+                                                  </h3>
+                                        </strong>
+                              </div>
+                              <ul
+                                        className="list-group"
+                              >
+                                        <Days
+                                                  getMenu={[Function]}
+                                        />
+                              </ul>
+                    </div>
+                    <Modal
+                              autoFocus={true}
+                              backdrop={true}
+                              backdropTransition={
+                                        Object {
+                                                  "timeout": 1300,
+                                                }
+                              }
+                              centered={false}
+                              className=""
+                              fade={true}
+                              isOpen={false}
+                              keyboard={true}
+                              modalTransition={
+                                        Object {
+                                                  "timeout": 300,
+                                                }
+                              }
+                              onClosed={[Function]}
+                              onOpened={[Function]}
+                              role="dialog"
+                              toggle={[Function]}
+                              zIndex={1050}
+                    >
+                              <ModalHeader
+                                        charCode={215}
+                                        closeAriaLabel="Close"
+                                        tag="h5"
+                                        toggle={[Function]}
+                                        wrapTag="div"
+                              >
+                                        Menu
+                              </ModalHeader>
+                              <ModalBody
+                                        tag="div"
+                              >
+                                        <Connect(AddMenuPage) />
+                              </ModalBody>
+                    </Modal>
+          </div>
+</div>,
+        "tag": "div",
+        "widths": Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Navbar
+              color="success"
+              expand="md"
+              light={true}
+              tag="nav"
+>
+              <NavbarBrand
+                            href="/"
+                            tag="a"
+              >
+                            Book-A-Meal | Home 
+              </NavbarBrand>
+              <NavbarToggler
+                            onClick={[Function]}
+                            tag="button"
+                            type="button"
+              />
+              <Collapse
+                            appear={false}
+                            enter={true}
+                            exit={true}
+                            in={false}
+                            isOpen={false}
+                            mountOnEnter={false}
+                            navbar={true}
+                            onEnter={[Function]}
+                            onEntered={[Function]}
+                            onEntering={[Function]}
+                            onExit={[Function]}
+                            onExited={[Function]}
+                            onExiting={[Function]}
+                            tag="div"
+                            timeout={350}
+                            unmountOnExit={false}
+              >
+                            <Nav
+                                          className="ml-auto"
+                                          navbar={true}
+                                          tag="ul"
+                                          vertical={false}
+                            >
+                                          <NavLink
+                                                        activeStyle={
+                                                                      Object {
+                                                                                    "backgroundColor": "white",
+                                                                                    "color": "slategasy",
+                                                                                  }
+                                                        }
+                                                        href="/getMeals"
+                                                        tag="a"
+                                          >
+                                                        Meals
+                                          </NavLink>
+                                          <NavLink
+                                                        activeStyle={
+                                                                      Object {
+                                                                                    "backgroundColor": "white",
+                                                                                    "color": "slategasy",
+                                                                                  }
+                                                        }
+                                                        href="/adminMenu"
+                                                        tag="a"
+                                          >
+                                                        Menu
+                                          </NavLink>
+                                          <NavLink
+                                                        activeStyle={
+                                                                      Object {
+                                                                                    "backgroundColor": "white",
+                                                                                    "color": "slategasy",
+                                                                                  }
+                                                        }
+                                                        href="/adminOrders"
+                                                        tag="a"
+                                          >
+                                                        Orders
+                                          </NavLink>
+                                          <NavLink
+                                                        activeStyle={
+                                                                      Object {
+                                                                                    "backgroundColor": "white",
+                                                                                    "color": "slategasy",
+                                                                                  }
+                                                        }
+                                                        href="/adminlogin"
+                                                        tag="a"
+                                          >
+                                                        Logout
+                                          </NavLink>
+                            </Nav>
+              </Collapse>
+</Navbar>,
+            <button
+              className="btn btn-success btn-sm"
+              onClick={[Function]}
+              style={
+                            Object {
+                                          "height": "2rem",
+                                          "margin": "10px",
+                                          "width": "4rem",
+                                        }
+              }
+>
+              Add
+</button>,
+            <div
+              className="row"
+>
+              <div
+                            className="col-md-2"
+              >
+                            <div
+                                          className="header text-center"
+                                          style={
+                                                        Object {
+                                                                      "margin": "5px",
+                                                                    }
+                                          }
+                            >
+                                          <strong>
+                                                        <h3>
+                                                                      Weekday
+                                                        </h3>
+                                          </strong>
+                            </div>
+                            <ul
+                                          className="list-group"
+                            >
+                                          <Days
+                                                        getMenu={[Function]}
+                                          />
+                            </ul>
+              </div>
+              <Modal
+                            autoFocus={true}
+                            backdrop={true}
+                            backdropTransition={
+                                          Object {
+                                                        "timeout": 1300,
+                                                      }
+                            }
+                            centered={false}
+                            className=""
+                            fade={true}
+                            isOpen={false}
+                            keyboard={true}
+                            modalTransition={
+                                          Object {
+                                                        "timeout": 300,
+                                                      }
+                            }
+                            onClosed={[Function]}
+                            onOpened={[Function]}
+                            role="dialog"
+                            toggle={[Function]}
+                            zIndex={1050}
+              >
+                            <ModalHeader
+                                          charCode={215}
+                                          closeAriaLabel="Close"
+                                          tag="h5"
+                                          toggle={[Function]}
+                                          wrapTag="div"
+                            >
+                                          Menu
+                            </ModalHeader>
+                            <ModalBody
+                                          tag="div"
+                            >
+                                          <Connect(AddMenuPage) />
+                            </ModalBody>
+              </Modal>
+</div>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <NavbarBrand
+                  href="/"
+                  tag="a"
+>
+                  Book-A-Meal | Home 
+</NavbarBrand>,
+                <NavbarToggler
+                  onClick={[Function]}
+                  tag="button"
+                  type="button"
+/>,
+                <Collapse
+                  appear={false}
+                  enter={true}
+                  exit={true}
+                  in={false}
+                  isOpen={false}
+                  mountOnEnter={false}
+                  navbar={true}
+                  onEnter={[Function]}
+                  onEntered={[Function]}
+                  onEntering={[Function]}
+                  onExit={[Function]}
+                  onExited={[Function]}
+                  onExiting={[Function]}
+                  tag="div"
+                  timeout={350}
+                  unmountOnExit={false}
+>
+                  <Nav
+                                    className="ml-auto"
+                                    navbar={true}
+                                    tag="ul"
+                                    vertical={false}
+                  >
+                                    <NavLink
+                                                      activeStyle={
+                                                                        Object {
+                                                                                          "backgroundColor": "white",
+                                                                                          "color": "slategasy",
+                                                                                        }
+                                                      }
+                                                      href="/getMeals"
+                                                      tag="a"
+                                    >
+                                                      Meals
+                                    </NavLink>
+                                    <NavLink
+                                                      activeStyle={
+                                                                        Object {
+                                                                                          "backgroundColor": "white",
+                                                                                          "color": "slategasy",
+                                                                                        }
+                                                      }
+                                                      href="/adminMenu"
+                                                      tag="a"
+                                    >
+                                                      Menu
+                                    </NavLink>
+                                    <NavLink
+                                                      activeStyle={
+                                                                        Object {
+                                                                                          "backgroundColor": "white",
+                                                                                          "color": "slategasy",
+                                                                                        }
+                                                      }
+                                                      href="/adminOrders"
+                                                      tag="a"
+                                    >
+                                                      Orders
+                                    </NavLink>
+                                    <NavLink
+                                                      activeStyle={
+                                                                        Object {
+                                                                                          "backgroundColor": "white",
+                                                                                          "color": "slategasy",
+                                                                                        }
+                                                      }
+                                                      href="/adminlogin"
+                                                      tag="a"
+                                    >
+                                                      Logout
+                                    </NavLink>
+                  </Nav>
+</Collapse>,
+              ],
+              "color": "success",
+              "expand": "md",
+              "light": true,
+              "tag": "nav",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Book-A-Meal | Home ",
+                  "href": "/",
+                  "tag": "a",
+                },
+                "ref": null,
+                "rendered": "Book-A-Meal | Home ",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "onClick": [Function],
+                  "tag": "button",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "appear": false,
+                  "children": <Nav
+                    className="ml-auto"
+                    navbar={true}
+                    tag="ul"
+                    vertical={false}
+>
+                    <NavLink
+                                        activeStyle={
+                                                            Object {
+                                                                                "backgroundColor": "white",
+                                                                                "color": "slategasy",
+                                                                              }
+                                        }
+                                        href="/getMeals"
+                                        tag="a"
+                    >
+                                        Meals
+                    </NavLink>
+                    <NavLink
+                                        activeStyle={
+                                                            Object {
+                                                                                "backgroundColor": "white",
+                                                                                "color": "slategasy",
+                                                                              }
+                                        }
+                                        href="/adminMenu"
+                                        tag="a"
+                    >
+                                        Menu
+                    </NavLink>
+                    <NavLink
+                                        activeStyle={
+                                                            Object {
+                                                                                "backgroundColor": "white",
+                                                                                "color": "slategasy",
+                                                                              }
+                                        }
+                                        href="/adminOrders"
+                                        tag="a"
+                    >
+                                        Orders
+                    </NavLink>
+                    <NavLink
+                                        activeStyle={
+                                                            Object {
+                                                                                "backgroundColor": "white",
+                                                                                "color": "slategasy",
+                                                                              }
+                                        }
+                                        href="/adminlogin"
+                                        tag="a"
+                    >
+                                        Logout
+                    </NavLink>
+</Nav>,
+                  "enter": true,
+                  "exit": true,
+                  "in": false,
+                  "isOpen": false,
+                  "mountOnEnter": false,
+                  "navbar": true,
+                  "onEnter": [Function],
+                  "onEntered": [Function],
+                  "onEntering": [Function],
+                  "onExit": [Function],
+                  "onExited": [Function],
+                  "onExiting": [Function],
+                  "tag": "div",
+                  "timeout": 350,
+                  "unmountOnExit": false,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <NavLink
+                        activeStyle={
+                                                Object {
+                                                                        "backgroundColor": "white",
+                                                                        "color": "slategasy",
+                                                                      }
+                        }
+                        href="/getMeals"
+                        tag="a"
+>
+                        Meals
+</NavLink>,
+                      <NavLink
+                        activeStyle={
+                                                Object {
+                                                                        "backgroundColor": "white",
+                                                                        "color": "slategasy",
+                                                                      }
+                        }
+                        href="/adminMenu"
+                        tag="a"
+>
+                        Menu
+</NavLink>,
+                      <NavLink
+                        activeStyle={
+                                                Object {
+                                                                        "backgroundColor": "white",
+                                                                        "color": "slategasy",
+                                                                      }
+                        }
+                        href="/adminOrders"
+                        tag="a"
+>
+                        Orders
+</NavLink>,
+                      <NavLink
+                        activeStyle={
+                                                Object {
+                                                                        "backgroundColor": "white",
+                                                                        "color": "slategasy",
+                                                                      }
+                        }
+                        href="/adminlogin"
+                        tag="a"
+>
+                        Logout
+</NavLink>,
+                    ],
+                    "className": "ml-auto",
+                    "navbar": true,
+                    "tag": "ul",
+                    "vertical": false,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "activeStyle": Object {
+                          "backgroundColor": "white",
+                          "color": "slategasy",
+                        },
+                        "children": "Meals",
+                        "href": "/getMeals",
+                        "tag": "a",
+                      },
+                      "ref": null,
+                      "rendered": "Meals",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "activeStyle": Object {
+                          "backgroundColor": "white",
+                          "color": "slategasy",
+                        },
+                        "children": "Menu",
+                        "href": "/adminMenu",
+                        "tag": "a",
+                      },
+                      "ref": null,
+                      "rendered": "Menu",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "activeStyle": Object {
+                          "backgroundColor": "white",
+                          "color": "slategasy",
+                        },
+                        "children": "Orders",
+                        "href": "/adminOrders",
+                        "tag": "a",
+                      },
+                      "ref": null,
+                      "rendered": "Orders",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "activeStyle": Object {
+                          "backgroundColor": "white",
+                          "color": "slategasy",
+                        },
+                        "children": "Logout",
+                        "href": "/adminlogin",
+                        "tag": "a",
+                      },
+                      "ref": null,
+                      "rendered": "Logout",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add",
+              "className": "btn btn-success btn-sm",
+              "onClick": [Function],
+              "style": Object {
+                "height": "2rem",
+                "margin": "10px",
+                "width": "4rem",
+              },
+            },
+            "ref": null,
+            "rendered": "Add",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col-md-2"
+>
+                  <div
+                                    className="header text-center"
+                                    style={
+                                                      Object {
+                                                                        "margin": "5px",
+                                                                      }
+                                    }
+                  >
+                                    <strong>
+                                                      <h3>
+                                                                        Weekday
+                                                      </h3>
+                                    </strong>
+                  </div>
+                  <ul
+                                    className="list-group"
+                  >
+                                    <Days
+                                                      getMenu={[Function]}
+                                    />
+                  </ul>
+</div>,
+                Array [],
+                <Modal
+                  autoFocus={true}
+                  backdrop={true}
+                  backdropTransition={
+                                    Object {
+                                                      "timeout": 1300,
+                                                    }
+                  }
+                  centered={false}
+                  className=""
+                  fade={true}
+                  isOpen={false}
+                  keyboard={true}
+                  modalTransition={
+                                    Object {
+                                                      "timeout": 300,
+                                                    }
+                  }
+                  onClosed={[Function]}
+                  onOpened={[Function]}
+                  role="dialog"
+                  toggle={[Function]}
+                  zIndex={1050}
+>
+                  <ModalHeader
+                                    charCode={215}
+                                    closeAriaLabel="Close"
+                                    tag="h5"
+                                    toggle={[Function]}
+                                    wrapTag="div"
+                  >
+                                    Menu
+                  </ModalHeader>
+                  <ModalBody
+                                    tag="div"
+                  >
+                                    <Connect(AddMenuPage) />
+                  </ModalBody>
+</Modal>,
+              ],
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="header text-center"
+                      style={
+                                            Object {
+                                                                  "margin": "5px",
+                                                                }
+                      }
+>
+                      <strong>
+                                            <h3>
+                                                                  Weekday
+                                            </h3>
+                      </strong>
+</div>,
+                    <ul
+                      className="list-group"
+>
+                      <Days
+                                            getMenu={[Function]}
+                      />
+</ul>,
+                  ],
+                  "className": "col-md-2",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <strong>
+                        <h3>
+                                                Weekday
+                        </h3>
+</strong>,
+                      "className": "header text-center",
+                      "style": Object {
+                        "margin": "5px",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <h3>
+                          Weekday
+</h3>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Weekday",
+                        },
+                        "ref": null,
+                        "rendered": "Weekday",
+                        "type": "h3",
+                      },
+                      "type": "strong",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <Days
+                        getMenu={[Function]}
+/>,
+                      "className": "list-group",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "getMenu": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "ul",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "autoFocus": true,
+                  "backdrop": true,
+                  "backdropTransition": Object {
+                    "timeout": 1300,
+                  },
+                  "centered": false,
+                  "children": Array [
+                    <ModalHeader
+                      charCode={215}
+                      closeAriaLabel="Close"
+                      tag="h5"
+                      toggle={[Function]}
+                      wrapTag="div"
+>
+                      Menu
+</ModalHeader>,
+                    <ModalBody
+                      tag="div"
+>
+                      <Connect(AddMenuPage) />
+</ModalBody>,
+                  ],
+                  "className": "",
+                  "fade": true,
+                  "isOpen": false,
+                  "keyboard": true,
+                  "modalTransition": Object {
+                    "timeout": 300,
+                  },
+                  "onClosed": [Function],
+                  "onOpened": [Function],
+                  "role": "dialog",
+                  "toggle": [Function],
+                  "zIndex": 1050,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "charCode": 215,
+                      "children": "Menu",
+                      "closeAriaLabel": "Close",
+                      "tag": "h5",
+                      "toggle": [Function],
+                      "wrapTag": "div",
+                    },
+                    "ref": null,
+                    "rendered": "Menu",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <Connect(AddMenuPage) />,
+                      "tag": "div",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Col
+          tag="div"
+          widths={
+                    Array [
+                              "xs",
+                              "sm",
+                              "md",
+                              "lg",
+                              "xl",
+                            ]
+          }
+>
+          <div>
+                    <Navbar
+                              color="success"
+                              expand="md"
+                              light={true}
+                              tag="nav"
+                    >
+                              <NavbarBrand
+                                        href="/"
+                                        tag="a"
+                              >
+                                        Book-A-Meal | Home 
+                              </NavbarBrand>
+                              <NavbarToggler
+                                        onClick={[Function]}
+                                        tag="button"
+                                        type="button"
+                              />
+                              <Collapse
+                                        appear={false}
+                                        enter={true}
+                                        exit={true}
+                                        in={false}
+                                        isOpen={false}
+                                        mountOnEnter={false}
+                                        navbar={true}
+                                        onEnter={[Function]}
+                                        onEntered={[Function]}
+                                        onEntering={[Function]}
+                                        onExit={[Function]}
+                                        onExited={[Function]}
+                                        onExiting={[Function]}
+                                        tag="div"
+                                        timeout={350}
+                                        unmountOnExit={false}
+                              >
+                                        <Nav
+                                                  className="ml-auto"
+                                                  navbar={true}
+                                                  tag="ul"
+                                                  vertical={false}
+                                        >
+                                                  <NavLink
+                                                            activeStyle={
+                                                                      Object {
+                                                                                "backgroundColor": "white",
+                                                                                "color": "slategasy",
+                                                                              }
+                                                            }
+                                                            href="/getMeals"
+                                                            tag="a"
+                                                  >
+                                                            Meals
+                                                  </NavLink>
+                                                  <NavLink
+                                                            activeStyle={
+                                                                      Object {
+                                                                                "backgroundColor": "white",
+                                                                                "color": "slategasy",
+                                                                              }
+                                                            }
+                                                            href="/adminMenu"
+                                                            tag="a"
+                                                  >
+                                                            Menu
+                                                  </NavLink>
+                                                  <NavLink
+                                                            activeStyle={
+                                                                      Object {
+                                                                                "backgroundColor": "white",
+                                                                                "color": "slategasy",
+                                                                              }
+                                                            }
+                                                            href="/adminOrders"
+                                                            tag="a"
+                                                  >
+                                                            Orders
+                                                  </NavLink>
+                                                  <NavLink
+                                                            activeStyle={
+                                                                      Object {
+                                                                                "backgroundColor": "white",
+                                                                                "color": "slategasy",
+                                                                              }
+                                                            }
+                                                            href="/adminlogin"
+                                                            tag="a"
+                                                  >
+                                                            Logout
+                                                  </NavLink>
+                                        </Nav>
+                              </Collapse>
+                    </Navbar>
+                    <button
+                              className="btn btn-success btn-sm"
+                              onClick={[Function]}
+                              style={
+                                        Object {
+                                                  "height": "2rem",
+                                                  "margin": "10px",
+                                                  "width": "4rem",
+                                                }
+                              }
+                    >
+                              Add
+                    </button>
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-md-2"
+                              >
+                                        <div
+                                                  className="header text-center"
+                                                  style={
+                                                            Object {
+                                                                      "margin": "5px",
+                                                                    }
+                                                  }
+                                        >
+                                                  <strong>
+                                                            <h3>
+                                                                      Weekday
+                                                            </h3>
+                                                  </strong>
+                                        </div>
+                                        <ul
+                                                  className="list-group"
+                                        >
+                                                  <Days
+                                                            getMenu={[Function]}
+                                                  />
+                                        </ul>
+                              </div>
+                              <Modal
+                                        autoFocus={true}
+                                        backdrop={true}
+                                        backdropTransition={
+                                                  Object {
+                                                            "timeout": 1300,
+                                                          }
+                                        }
+                                        centered={false}
+                                        className=""
+                                        fade={true}
+                                        isOpen={false}
+                                        keyboard={true}
+                                        modalTransition={
+                                                  Object {
+                                                            "timeout": 300,
+                                                          }
+                                        }
+                                        onClosed={[Function]}
+                                        onOpened={[Function]}
+                                        role="dialog"
+                                        toggle={[Function]}
+                                        zIndex={1050}
+                              >
+                                        <ModalHeader
+                                                  charCode={215}
+                                                  closeAriaLabel="Close"
+                                                  tag="h5"
+                                                  toggle={[Function]}
+                                                  wrapTag="div"
+                                        >
+                                                  Menu
+                                        </ModalHeader>
+                                        <ModalBody
+                                                  tag="div"
+                                        >
+                                                  <Connect(AddMenuPage) />
+                                        </ModalBody>
+                              </Modal>
+                    </div>
+          </div>
+</Col>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <div>
+            <Navbar
+                        color="success"
+                        expand="md"
+                        light={true}
+                        tag="nav"
+            >
+                        <NavbarBrand
+                                    href="/"
+                                    tag="a"
+                        >
+                                    Book-A-Meal | Home 
+                        </NavbarBrand>
+                        <NavbarToggler
+                                    onClick={[Function]}
+                                    tag="button"
+                                    type="button"
+                        />
+                        <Collapse
+                                    appear={false}
+                                    enter={true}
+                                    exit={true}
+                                    in={false}
+                                    isOpen={false}
+                                    mountOnEnter={false}
+                                    navbar={true}
+                                    onEnter={[Function]}
+                                    onEntered={[Function]}
+                                    onEntering={[Function]}
+                                    onExit={[Function]}
+                                    onExited={[Function]}
+                                    onExiting={[Function]}
+                                    tag="div"
+                                    timeout={350}
+                                    unmountOnExit={false}
+                        >
+                                    <Nav
+                                                className="ml-auto"
+                                                navbar={true}
+                                                tag="ul"
+                                                vertical={false}
+                                    >
+                                                <NavLink
+                                                            activeStyle={
+                                                                        Object {
+                                                                                    "backgroundColor": "white",
+                                                                                    "color": "slategasy",
+                                                                                  }
+                                                            }
+                                                            href="/getMeals"
+                                                            tag="a"
+                                                >
+                                                            Meals
+                                                </NavLink>
+                                                <NavLink
+                                                            activeStyle={
+                                                                        Object {
+                                                                                    "backgroundColor": "white",
+                                                                                    "color": "slategasy",
+                                                                                  }
+                                                            }
+                                                            href="/adminMenu"
+                                                            tag="a"
+                                                >
+                                                            Menu
+                                                </NavLink>
+                                                <NavLink
+                                                            activeStyle={
+                                                                        Object {
+                                                                                    "backgroundColor": "white",
+                                                                                    "color": "slategasy",
+                                                                                  }
+                                                            }
+                                                            href="/adminOrders"
+                                                            tag="a"
+                                                >
+                                                            Orders
+                                                </NavLink>
+                                                <NavLink
+                                                            activeStyle={
+                                                                        Object {
+                                                                                    "backgroundColor": "white",
+                                                                                    "color": "slategasy",
+                                                                                  }
+                                                            }
+                                                            href="/adminlogin"
+                                                            tag="a"
+                                                >
+                                                            Logout
+                                                </NavLink>
+                                    </Nav>
+                        </Collapse>
+            </Navbar>
+            <button
+                        className="btn btn-success btn-sm"
+                        onClick={[Function]}
+                        style={
+                                    Object {
+                                                "height": "2rem",
+                                                "margin": "10px",
+                                                "width": "4rem",
+                                              }
+                        }
+            >
+                        Add
+            </button>
+            <div
+                        className="row"
+            >
+                        <div
+                                    className="col-md-2"
+                        >
+                                    <div
+                                                className="header text-center"
+                                                style={
+                                                            Object {
+                                                                        "margin": "5px",
+                                                                      }
+                                                }
+                                    >
+                                                <strong>
+                                                            <h3>
+                                                                        Weekday
+                                                            </h3>
+                                                </strong>
+                                    </div>
+                                    <ul
+                                                className="list-group"
+                                    >
+                                                <Days
+                                                            getMenu={[Function]}
+                                                />
+                                    </ul>
+                        </div>
+                        <Modal
+                                    autoFocus={true}
+                                    backdrop={true}
+                                    backdropTransition={
+                                                Object {
+                                                            "timeout": 1300,
+                                                          }
+                                    }
+                                    centered={false}
+                                    className=""
+                                    fade={true}
+                                    isOpen={false}
+                                    keyboard={true}
+                                    modalTransition={
+                                                Object {
+                                                            "timeout": 300,
+                                                          }
+                                    }
+                                    onClosed={[Function]}
+                                    onOpened={[Function]}
+                                    role="dialog"
+                                    toggle={[Function]}
+                                    zIndex={1050}
+                        >
+                                    <ModalHeader
+                                                charCode={215}
+                                                closeAriaLabel="Close"
+                                                tag="h5"
+                                                toggle={[Function]}
+                                                wrapTag="div"
+                                    >
+                                                Menu
+                                    </ModalHeader>
+                                    <ModalBody
+                                                tag="div"
+                                    >
+                                                <Connect(AddMenuPage) />
+                                    </ModalBody>
+                        </Modal>
+            </div>
+</div>,
+          "tag": "div",
+          "widths": Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Navbar
+                color="success"
+                expand="md"
+                light={true}
+                tag="nav"
+>
+                <NavbarBrand
+                                href="/"
+                                tag="a"
+                >
+                                Book-A-Meal | Home 
+                </NavbarBrand>
+                <NavbarToggler
+                                onClick={[Function]}
+                                tag="button"
+                                type="button"
+                />
+                <Collapse
+                                appear={false}
+                                enter={true}
+                                exit={true}
+                                in={false}
+                                isOpen={false}
+                                mountOnEnter={false}
+                                navbar={true}
+                                onEnter={[Function]}
+                                onEntered={[Function]}
+                                onEntering={[Function]}
+                                onExit={[Function]}
+                                onExited={[Function]}
+                                onExiting={[Function]}
+                                tag="div"
+                                timeout={350}
+                                unmountOnExit={false}
+                >
+                                <Nav
+                                                className="ml-auto"
+                                                navbar={true}
+                                                tag="ul"
+                                                vertical={false}
+                                >
+                                                <NavLink
+                                                                activeStyle={
+                                                                                Object {
+                                                                                                "backgroundColor": "white",
+                                                                                                "color": "slategasy",
+                                                                                              }
+                                                                }
+                                                                href="/getMeals"
+                                                                tag="a"
+                                                >
+                                                                Meals
+                                                </NavLink>
+                                                <NavLink
+                                                                activeStyle={
+                                                                                Object {
+                                                                                                "backgroundColor": "white",
+                                                                                                "color": "slategasy",
+                                                                                              }
+                                                                }
+                                                                href="/adminMenu"
+                                                                tag="a"
+                                                >
+                                                                Menu
+                                                </NavLink>
+                                                <NavLink
+                                                                activeStyle={
+                                                                                Object {
+                                                                                                "backgroundColor": "white",
+                                                                                                "color": "slategasy",
+                                                                                              }
+                                                                }
+                                                                href="/adminOrders"
+                                                                tag="a"
+                                                >
+                                                                Orders
+                                                </NavLink>
+                                                <NavLink
+                                                                activeStyle={
+                                                                                Object {
+                                                                                                "backgroundColor": "white",
+                                                                                                "color": "slategasy",
+                                                                                              }
+                                                                }
+                                                                href="/adminlogin"
+                                                                tag="a"
+                                                >
+                                                                Logout
+                                                </NavLink>
+                                </Nav>
+                </Collapse>
+</Navbar>,
+              <button
+                className="btn btn-success btn-sm"
+                onClick={[Function]}
+                style={
+                                Object {
+                                                "height": "2rem",
+                                                "margin": "10px",
+                                                "width": "4rem",
+                                              }
+                }
+>
+                Add
+</button>,
+              <div
+                className="row"
+>
+                <div
+                                className="col-md-2"
+                >
+                                <div
+                                                className="header text-center"
+                                                style={
+                                                                Object {
+                                                                                "margin": "5px",
+                                                                              }
+                                                }
+                                >
+                                                <strong>
+                                                                <h3>
+                                                                                Weekday
+                                                                </h3>
+                                                </strong>
+                                </div>
+                                <ul
+                                                className="list-group"
+                                >
+                                                <Days
+                                                                getMenu={[Function]}
+                                                />
+                                </ul>
+                </div>
+                <Modal
+                                autoFocus={true}
+                                backdrop={true}
+                                backdropTransition={
+                                                Object {
+                                                                "timeout": 1300,
+                                                              }
+                                }
+                                centered={false}
+                                className=""
+                                fade={true}
+                                isOpen={false}
+                                keyboard={true}
+                                modalTransition={
+                                                Object {
+                                                                "timeout": 300,
+                                                              }
+                                }
+                                onClosed={[Function]}
+                                onOpened={[Function]}
+                                role="dialog"
+                                toggle={[Function]}
+                                zIndex={1050}
+                >
+                                <ModalHeader
+                                                charCode={215}
+                                                closeAriaLabel="Close"
+                                                tag="h5"
+                                                toggle={[Function]}
+                                                wrapTag="div"
+                                >
+                                                Menu
+                                </ModalHeader>
+                                <ModalBody
+                                                tag="div"
+                                >
+                                                <Connect(AddMenuPage) />
+                                </ModalBody>
+                </Modal>
+</div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <NavbarBrand
+                    href="/"
+                    tag="a"
+>
+                    Book-A-Meal | Home 
+</NavbarBrand>,
+                  <NavbarToggler
+                    onClick={[Function]}
+                    tag="button"
+                    type="button"
+/>,
+                  <Collapse
+                    appear={false}
+                    enter={true}
+                    exit={true}
+                    in={false}
+                    isOpen={false}
+                    mountOnEnter={false}
+                    navbar={true}
+                    onEnter={[Function]}
+                    onEntered={[Function]}
+                    onEntering={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onExiting={[Function]}
+                    tag="div"
+                    timeout={350}
+                    unmountOnExit={false}
+>
+                    <Nav
+                                        className="ml-auto"
+                                        navbar={true}
+                                        tag="ul"
+                                        vertical={false}
+                    >
+                                        <NavLink
+                                                            activeStyle={
+                                                                                Object {
+                                                                                                    "backgroundColor": "white",
+                                                                                                    "color": "slategasy",
+                                                                                                  }
+                                                            }
+                                                            href="/getMeals"
+                                                            tag="a"
+                                        >
+                                                            Meals
+                                        </NavLink>
+                                        <NavLink
+                                                            activeStyle={
+                                                                                Object {
+                                                                                                    "backgroundColor": "white",
+                                                                                                    "color": "slategasy",
+                                                                                                  }
+                                                            }
+                                                            href="/adminMenu"
+                                                            tag="a"
+                                        >
+                                                            Menu
+                                        </NavLink>
+                                        <NavLink
+                                                            activeStyle={
+                                                                                Object {
+                                                                                                    "backgroundColor": "white",
+                                                                                                    "color": "slategasy",
+                                                                                                  }
+                                                            }
+                                                            href="/adminOrders"
+                                                            tag="a"
+                                        >
+                                                            Orders
+                                        </NavLink>
+                                        <NavLink
+                                                            activeStyle={
+                                                                                Object {
+                                                                                                    "backgroundColor": "white",
+                                                                                                    "color": "slategasy",
+                                                                                                  }
+                                                            }
+                                                            href="/adminlogin"
+                                                            tag="a"
+                                        >
+                                                            Logout
+                                        </NavLink>
+                    </Nav>
+</Collapse>,
+                ],
+                "color": "success",
+                "expand": "md",
+                "light": true,
+                "tag": "nav",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Book-A-Meal | Home ",
+                    "href": "/",
+                    "tag": "a",
+                  },
+                  "ref": null,
+                  "rendered": "Book-A-Meal | Home ",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "onClick": [Function],
+                    "tag": "button",
+                    "type": "button",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "appear": false,
+                    "children": <Nav
+                      className="ml-auto"
+                      navbar={true}
+                      tag="ul"
+                      vertical={false}
+>
+                      <NavLink
+                                            activeStyle={
+                                                                  Object {
+                                                                                        "backgroundColor": "white",
+                                                                                        "color": "slategasy",
+                                                                                      }
+                                            }
+                                            href="/getMeals"
+                                            tag="a"
+                      >
+                                            Meals
+                      </NavLink>
+                      <NavLink
+                                            activeStyle={
+                                                                  Object {
+                                                                                        "backgroundColor": "white",
+                                                                                        "color": "slategasy",
+                                                                                      }
+                                            }
+                                            href="/adminMenu"
+                                            tag="a"
+                      >
+                                            Menu
+                      </NavLink>
+                      <NavLink
+                                            activeStyle={
+                                                                  Object {
+                                                                                        "backgroundColor": "white",
+                                                                                        "color": "slategasy",
+                                                                                      }
+                                            }
+                                            href="/adminOrders"
+                                            tag="a"
+                      >
+                                            Orders
+                      </NavLink>
+                      <NavLink
+                                            activeStyle={
+                                                                  Object {
+                                                                                        "backgroundColor": "white",
+                                                                                        "color": "slategasy",
+                                                                                      }
+                                            }
+                                            href="/adminlogin"
+                                            tag="a"
+                      >
+                                            Logout
+                      </NavLink>
+</Nav>,
+                    "enter": true,
+                    "exit": true,
+                    "in": false,
+                    "isOpen": false,
+                    "mountOnEnter": false,
+                    "navbar": true,
+                    "onEnter": [Function],
+                    "onEntered": [Function],
+                    "onEntering": [Function],
+                    "onExit": [Function],
+                    "onExited": [Function],
+                    "onExiting": [Function],
+                    "tag": "div",
+                    "timeout": 350,
+                    "unmountOnExit": false,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": Array [
+                        <NavLink
+                          activeStyle={
+                                                    Object {
+                                                                              "backgroundColor": "white",
+                                                                              "color": "slategasy",
+                                                                            }
+                          }
+                          href="/getMeals"
+                          tag="a"
+>
+                          Meals
+</NavLink>,
+                        <NavLink
+                          activeStyle={
+                                                    Object {
+                                                                              "backgroundColor": "white",
+                                                                              "color": "slategasy",
+                                                                            }
+                          }
+                          href="/adminMenu"
+                          tag="a"
+>
+                          Menu
+</NavLink>,
+                        <NavLink
+                          activeStyle={
+                                                    Object {
+                                                                              "backgroundColor": "white",
+                                                                              "color": "slategasy",
+                                                                            }
+                          }
+                          href="/adminOrders"
+                          tag="a"
+>
+                          Orders
+</NavLink>,
+                        <NavLink
+                          activeStyle={
+                                                    Object {
+                                                                              "backgroundColor": "white",
+                                                                              "color": "slategasy",
+                                                                            }
+                          }
+                          href="/adminlogin"
+                          tag="a"
+>
+                          Logout
+</NavLink>,
+                      ],
+                      "className": "ml-auto",
+                      "navbar": true,
+                      "tag": "ul",
+                      "vertical": false,
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "activeStyle": Object {
+                            "backgroundColor": "white",
+                            "color": "slategasy",
+                          },
+                          "children": "Meals",
+                          "href": "/getMeals",
+                          "tag": "a",
+                        },
+                        "ref": null,
+                        "rendered": "Meals",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "activeStyle": Object {
+                            "backgroundColor": "white",
+                            "color": "slategasy",
+                          },
+                          "children": "Menu",
+                          "href": "/adminMenu",
+                          "tag": "a",
+                        },
+                        "ref": null,
+                        "rendered": "Menu",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "activeStyle": Object {
+                            "backgroundColor": "white",
+                            "color": "slategasy",
+                          },
+                          "children": "Orders",
+                          "href": "/adminOrders",
+                          "tag": "a",
+                        },
+                        "ref": null,
+                        "rendered": "Orders",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "activeStyle": Object {
+                            "backgroundColor": "white",
+                            "color": "slategasy",
+                          },
+                          "children": "Logout",
+                          "href": "/adminlogin",
+                          "tag": "a",
+                        },
+                        "ref": null,
+                        "rendered": "Logout",
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add",
+                "className": "btn btn-success btn-sm",
+                "onClick": [Function],
+                "style": Object {
+                  "height": "2rem",
+                  "margin": "10px",
+                  "width": "4rem",
+                },
+              },
+              "ref": null,
+              "rendered": "Add",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="col-md-2"
+>
+                    <div
+                                        className="header text-center"
+                                        style={
+                                                            Object {
+                                                                                "margin": "5px",
+                                                                              }
+                                        }
+                    >
+                                        <strong>
+                                                            <h3>
+                                                                                Weekday
+                                                            </h3>
+                                        </strong>
+                    </div>
+                    <ul
+                                        className="list-group"
+                    >
+                                        <Days
+                                                            getMenu={[Function]}
+                                        />
+                    </ul>
+</div>,
+                  Array [],
+                  <Modal
+                    autoFocus={true}
+                    backdrop={true}
+                    backdropTransition={
+                                        Object {
+                                                            "timeout": 1300,
+                                                          }
+                    }
+                    centered={false}
+                    className=""
+                    fade={true}
+                    isOpen={false}
+                    keyboard={true}
+                    modalTransition={
+                                        Object {
+                                                            "timeout": 300,
+                                                          }
+                    }
+                    onClosed={[Function]}
+                    onOpened={[Function]}
+                    role="dialog"
+                    toggle={[Function]}
+                    zIndex={1050}
+>
+                    <ModalHeader
+                                        charCode={215}
+                                        closeAriaLabel="Close"
+                                        tag="h5"
+                                        toggle={[Function]}
+                                        wrapTag="div"
+                    >
+                                        Menu
+                    </ModalHeader>
+                    <ModalBody
+                                        tag="div"
+                    >
+                                        <Connect(AddMenuPage) />
+                    </ModalBody>
+</Modal>,
+                ],
+                "className": "row",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="header text-center"
+                        style={
+                                                Object {
+                                                                        "margin": "5px",
+                                                                      }
+                        }
+>
+                        <strong>
+                                                <h3>
+                                                                        Weekday
+                                                </h3>
+                        </strong>
+</div>,
+                      <ul
+                        className="list-group"
+>
+                        <Days
+                                                getMenu={[Function]}
+                        />
+</ul>,
+                    ],
+                    "className": "col-md-2",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <strong>
+                          <h3>
+                                                    Weekday
+                          </h3>
+</strong>,
+                        "className": "header text-center",
+                        "style": Object {
+                          "margin": "5px",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <h3>
+                            Weekday
+</h3>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Weekday",
+                          },
+                          "ref": null,
+                          "rendered": "Weekday",
+                          "type": "h3",
+                        },
+                        "type": "strong",
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <Days
+                          getMenu={[Function]}
+/>,
+                        "className": "list-group",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "getMenu": [Function],
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": "ul",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "autoFocus": true,
+                    "backdrop": true,
+                    "backdropTransition": Object {
+                      "timeout": 1300,
+                    },
+                    "centered": false,
+                    "children": Array [
+                      <ModalHeader
+                        charCode={215}
+                        closeAriaLabel="Close"
+                        tag="h5"
+                        toggle={[Function]}
+                        wrapTag="div"
+>
+                        Menu
+</ModalHeader>,
+                      <ModalBody
+                        tag="div"
+>
+                        <Connect(AddMenuPage) />
+</ModalBody>,
+                    ],
+                    "className": "",
+                    "fade": true,
+                    "isOpen": false,
+                    "keyboard": true,
+                    "modalTransition": Object {
+                      "timeout": 300,
+                    },
+                    "onClosed": [Function],
+                    "onOpened": [Function],
+                    "role": "dialog",
+                    "toggle": [Function],
+                    "zIndex": 1050,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "charCode": 215,
+                        "children": "Menu",
+                        "closeAriaLabel": "Close",
+                        "tag": "h5",
+                        "toggle": [Function],
+                        "wrapTag": "div",
+                      },
+                      "ref": null,
+                      "rendered": "Menu",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": <Connect(AddMenuPage) />,
+                        "tag": "div",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

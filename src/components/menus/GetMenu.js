@@ -1,25 +1,36 @@
-import React, { Component } from 'react';
+import React, {
+    Component
+} from 'react';
 import instance from '../../actions/instance';
 
-import { Badge, Button, Col,
-    Modal, ModalHeader, ModalBody,
-     ModalFooter , Form, FormGroup,
-      Label, Input} from 'reactstrap'
+import {
+    Badge,
+    Button,
+    Col,
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+    Form,
+    FormGroup,
+    Label,
+    Input
+} from 'reactstrap'
 
 import {
-        Collapse,
-        Navbar,
-        NavbarToggler,
-        NavbarBrand,
-        Nav,
-        NavItem,
-        NavLink,
-        NavDropdown,
-        DropdownMenu,
-        DropdownItem,
-        UncontrolledDropdown,
-        DropdownToggle,
-        } from 'reactstrap';
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    NavDropdown,
+    DropdownMenu,
+    DropdownItem,
+    UncontrolledDropdown,
+    DropdownToggle,
+} from 'reactstrap';
 
 
 import '../.././index.css';
