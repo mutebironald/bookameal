@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/e41502dc4968e2bff8ab/maintainability)](https://codeclimate.com/github/mutebironald4/bookameal/maintainability)
 
 
-# Bookameal
+# Book-A-Meal
 
 
 > Book-A-Meal is an application that allows Users to book a meal of their choice.
