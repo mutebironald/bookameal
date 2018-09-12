@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import { addMealRequest } from '../../actions/addMealRequest';  
 
-class AddMenuPage extends Component{
+export class AddMenuPage extends Component{
     render(){
         const { addMealRequest } = this.props;
         return(

@@ -6,7 +6,7 @@ import "../.././App.css"
 import { addMenuRequest } from '../../actions/addMenuRequest';
 
 
-class CreateMenu extends React.Component {
+export class CreateMenu extends React.Component {
     constructor(props){
     super(props);
     this.state = {

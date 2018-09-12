@@ -13,7 +13,7 @@ const selectedStyle = {
     color: "slategasy"
   }
 
-class AdminMenu extends React.Component {
+export class AdminMenu extends React.Component {
     constructor(props){
         super(props);
         this.state = {
