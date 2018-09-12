@@ -115,7 +115,6 @@ export class SignupForm extends React.Component {
             <Notifications/>
                 <h1 className="text-center">Register</h1>
                 <div className="panel panel-default">
-                <FormErrors formErrors={this.state.formErrors} />
                 </div>
 
                 <div className="form-group">
@@ -130,7 +129,7 @@ export class SignupForm extends React.Component {
                     />
                 </div>
 
-                <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+                <div className="form-group">
                     <label className="control-label"><strong>Email</strong></label>
                     <input
                         value={this.state.email}
@@ -155,7 +154,7 @@ export class SignupForm extends React.Component {
                     />
                 </div>
 
-                <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+                <div className="form-group">
                     <label className="control-label"><strong>Admin</strong></label><br/><br/>
                      <fieldset id="is_admin" onChange={this.onChange}>&emsp;
                         <label><strong>True</strong></label>&emsp;

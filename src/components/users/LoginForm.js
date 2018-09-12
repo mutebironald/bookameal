@@ -89,10 +89,6 @@ export class LoginForm extends React.Component {
 
     onSubmit(event){
         event.preventDefault();
-        // console.log("hello from login")
-        // console.log(JSON.stringify(this.state));
-
-
         this.props.userLoginRequest(this.state)
         .then(response => {
             if(response.loggedIn){
@@ -145,7 +141,6 @@ export class LoginForm extends React.Component {
             <Notifications/>
                 <h6 className="text-center"><strong>Login</strong></h6>
                 <div className="panel panel-default">
-                {/* <FormErrors formErrors={this.state.formErrors}  /> */}
                 </div>
 
                 <div className="form-group">
@@ -187,7 +182,7 @@ export class LoginForm extends React.Component {
                 
 
                 <div className="form-group">
-                    <button className="btn btn-primary btn-success" disabled={!this.state.formValid}>
+                    <button className="btn btn-primary btn-success" >
                         Login
                     </button>
                 </div>
