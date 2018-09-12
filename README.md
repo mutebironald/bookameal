@@ -6,7 +6,7 @@
 # Book-A-Meal
 
 
-> Book-A-Meal is an application that allows Users to book a meal of their choice.
+> Book-A-Meal is an application that allows Users/customers  to book a meal of their choice from the caterers registered on the App.
 
 
 ## Features
