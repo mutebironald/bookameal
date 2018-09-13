@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateMealRequest } from '../../actions/updateMealRequest'
+import  updateMealRequest  from '../../actions/updateMealRequest'
 import '../.././App.css'
 
 import Notifications, {notify} from 'react-notify-toast';

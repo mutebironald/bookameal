@@ -45,12 +45,10 @@ export class AdminLoginForm extends React.Component {
         .then(response => {
             if(response.loggedIn){
                 if(response.admin === true){
-                    console.log("we are here")
                     toastr.success(response.message)
                     this.props.history.push('/getMeals')
                 }
                 else{
-                    console.log("Come on people", response.admin)
                     toastr.success(response.message)
                     this.props.history.push('/UserMenu')
 

@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AdminDashboard component should render correctly 1`] = `
+exports[`FormError component renders successfully 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <getCurrentDay />,
+  Symbol(enzyme.__unrendered__): <Unknown
+    formErrors={
+        Array [
+            Object {
+              "field": "",
+            },
+          ]
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -12,9 +20,39 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): "Thursday",
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        "",
+      ],
+      "className": "formErrors",
+    },
+    "ref": null,
+    "rendered": Array [
+      "",
+    ],
+    "type": "div",
+  },
   Symbol(enzyme.__nodes__): Array [
-    "Thursday",
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          "",
+        ],
+        "className": "formErrors",
+      },
+      "ref": null,
+      "rendered": Array [
+        "",
+      ],
+      "type": "div",
+    },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {

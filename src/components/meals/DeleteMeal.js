@@ -4,7 +4,7 @@ import instance from '../../actions/instance';
 
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { deleteMealRequest } from '../../actions/deleteMealRequest'
+import  deleteMealRequest  from '../../actions/deleteMealRequest'
 import Notifications, {notify} from 'react-notify-toast';
 import toastr from 'toastr';
 

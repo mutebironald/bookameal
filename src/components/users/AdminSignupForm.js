@@ -6,7 +6,7 @@ import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reac
 import toastr from 'toastr';
 import '../.././App.css';
 import '../.././index.css';
-import { adminSignupRequest } from '../../actions/adminSignupRequest';
+import  adminSignupRequest  from '../../actions/adminSignupRequest';
         
 const selectedStyle = {
     backgroundColor: "white",

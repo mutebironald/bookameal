@@ -11,8 +11,7 @@ export default function getOrderHistoryRequest(data){
 
         })
         .catch(error => {
-            console.log("errors", error);
-            return {getOrder: false, message: "Invalid something"};
+            return {getOrder: false, message: "Invalid id"};
         })
     }
 }
