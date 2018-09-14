@@ -3,7 +3,6 @@ import instance from '../actions/instance';
 
 export default function userLoginRequest(data) {
     return function(dispatch){
-        console.log("Test Action")
 
         return instance.post(`/auth/login`, data)
         .then(res => {

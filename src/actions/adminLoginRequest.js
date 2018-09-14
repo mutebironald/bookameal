@@ -3,8 +3,6 @@ import instance from '../actions/instance';
 
 export  default function adminLoginRequest(data){
     return function(dispatch){
-        console.log("This is an Administrator", data)
-        console.log(instance.post(`/auth/admin/login`, data))
 
         return instance.post(`/auth/admin/login`, data)
         .then(res => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, CardText, CardTitle, Collapse, Modal, ModalBody, ModalHeader, Nav, Navbar, NavbarBrand, NavbarToggler, NavLink } from 'reactstrap';
 import '../.././index.css';
 import CreateOrder from './CreateOrder';
+import instance from '../../actions/instance';
 
 const selectedStyle = {
         backgroundColor: "white",
@@ -19,11 +20,10 @@ class GetOrders extends React.Component {
         };
 
     componentDidMount(){
-        fetch('/api/v1/orders')
-        .then(response => response)
-        .then(resData => {
+        instance.get('/api/v1/orders')
+        .then(response => {
 
-            let meals = resData
+            let meals = response;
            this.setState({ orderMeals: meals });
         })
     };

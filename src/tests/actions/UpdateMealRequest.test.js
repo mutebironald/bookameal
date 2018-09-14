@@ -6,10 +6,7 @@ import axiosInstance from '../../actions/instance';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-
-
 describe("Update meal", () => {
-
     it("should update meals", ()=>{
         const data = {title: "test", price: "1200", description:"test"}
         const mock = new MockAdapter(axiosInstance);

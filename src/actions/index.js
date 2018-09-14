@@ -1,6 +1,6 @@
-import { USER_LOGIN, ADD_FLASH_MESSAGE, successful_login,  ADD_MEAL, UPDATE_MEAL, GET_MEALS, DELETE_MEAL } from './types';
+import { ADD_MEAL, UPDATE_MEAL, GET_MEALS, DELETE_MEAL } from './types';
 import axios from 'axios';
-import instance from '../actions/instance';
+import instance from './instance';
 
 const apiUrl = 'http://localhost:5000';
 
@@ -14,7 +14,6 @@ export const addMeal = ({ name, price }) => {
         .catch(error => {
             throw(error);
         });
-        console.log("here")
     };
 };
 

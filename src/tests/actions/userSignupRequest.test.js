@@ -9,7 +9,6 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe("sign a user in", () => {
-
     it("should signup user", ()=>{
         const data = {title: "test", price: "1200", description:"test"}
         const mock = new MockAdapter(axiosInstance);

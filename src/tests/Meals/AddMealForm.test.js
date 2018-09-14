@@ -42,6 +42,13 @@ describe( "Add Meal Component", () => {
         expect(mockFn.mock.calls.length).toBe(1);
 
     });
+    
+
+
+
+
+
+
 
 
     it("renders successfully", () => {

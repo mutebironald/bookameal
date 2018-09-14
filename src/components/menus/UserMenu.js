@@ -227,10 +227,8 @@ class UserMenu extends React.Component {
                 <ModalHeader toggle={this.toggle2} class="modal" >My Order History</ModalHeader>
                 <ModalBody class="modal-main">
                     <GetOrderHistory/>
-                    {/* <CreateOrder id={this.state.id} toggle={this.toggle2.bind(this)}/> */}
                 </ModalBody>
                 <ModalFooter>
-                    {/* <button onClick={() => this.resetOrder2()} className="btn btn-primary">Close</button> */}
                 </ModalFooter>
             </Modal>
  

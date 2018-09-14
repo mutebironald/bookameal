@@ -2,13 +2,6 @@ import React from "react";
 import {LoginForm } from "../components/users/LoginForm";
 const fn =  () => Promise.resolve({})
 
-// function setUp(){
-//   const props ={
-//     userLoginRequest: ()=>{},
-//     loginData: ''
-//   };
-//   return shallow(<LoginForm userLoginRequest={jest.fn()} loginData={""}/>)
-// }
 
 function setup(loggedIn=true, admin=true){
   const props ={
