@@ -8,9 +8,7 @@ export  default function adminLoginRequest(data){
 
         return instance.post(`/auth/admin/login`, data)
         .then(res => {
-            console.log("here")
-            console.log(res.data.message)
-            console.log("here here", res.data.access_token)
+
 
             localStorage.setItem("Authorization", res.data.access_token)
 

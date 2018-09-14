@@ -64,7 +64,6 @@ export class AdminMenu extends React.Component {
 
     returnMenu = () =>{
         const  currentMenu = this.state.currentMenu;
-        console.log("currentMenu",this.state.currentMenu)
 
         if(currentMenu.meals.length === undefined){
             return (

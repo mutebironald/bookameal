@@ -3,7 +3,6 @@ import instance from '../actions/instance';
 
 
 export default function deleteMealRequest(meal_id){
-    console.log("you are deleting")
     
     return function(dispatch){
 
@@ -13,7 +12,6 @@ export default function deleteMealRequest(meal_id){
         return {deletedMeal: true, message: response};
     })
     .catch(error => {
-        console.log("error", error)
         return {deletedMeal: false, message: "The meal specified is not present"};
     })
 }

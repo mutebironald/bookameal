@@ -41,6 +41,16 @@ describe("Implement delete meal component", () => {
         expect(wrapper.instance().state.meal_id).toBe("")
     });
 
+    it("should handle submit", () => {
+        const evt = {
+            preventDefault: mockFn
+        }
+        wrapper.instance().onSubmit(evt);
+        expect(mockFn.mock.calls.length).toBe(1)
+
+        wrapper.instance().onSubmit(evt)
+        expect(wrapper.instance().state.meal_id).toBe("")
+    });
 
     it("should render successfully", () => {
         expect(wrapper).toHaveLength(1);

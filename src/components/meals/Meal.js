@@ -28,7 +28,7 @@ export default class Meal extends Component {
         return (
             <div >
                 <div>
-                    {/* <h2>Meals</h2> */}
+                    
                     <GetMeals/>
                 </div>
                 <div>
@@ -47,9 +47,9 @@ export default class Meal extends Component {
                 </div>
                 </div>
 
-            // </div>
+            
         )
     }
 }
 
-// export default Meal;
+

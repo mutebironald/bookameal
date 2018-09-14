@@ -6,8 +6,6 @@ export default function addOrderRequest(data){
 
         return instance.post(`/api/v1/orders`, data, {headers:{"Authorization": localStorage.getItem('Authorization')}})
         .then(response => {
-            console.log(response.data)
-            console.log("watch me nae nae",response)
             dispatch({ type: "ADD_ORDER", payload: data });
             return { addOrder: true, message: response.data.message};
         })

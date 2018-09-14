@@ -25,8 +25,6 @@ export class CreateOrder extends React.Component {
 
     onSubmit(event){
         event.preventDefault();
-        
-            console.log(this.state);
             let  data = {
                 'menu_id': this.state.menu_id
             }

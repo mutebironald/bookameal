@@ -45,7 +45,6 @@ export class SignupForm extends React.Component {
 
     onSubmit(event){
         event.preventDefault();
-        console.log(JSON.stringify(this.state));
         this.props.userSignupRequest(this.state)
         .then(response => {
             if(response.signedUp){

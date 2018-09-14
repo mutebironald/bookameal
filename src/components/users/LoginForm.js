@@ -32,13 +32,8 @@ export class LoginForm extends React.Component {
     }
 
     componentDidMount() {
-        // console.log(this.props)
         let green = { background: 'green', text: "white" };
         notify.show("login", "custom", 1000, green)
-    }
-
-    componentWillMount(){
-        // console.log("redux", this.props)
     }
 
     onChange(event) {

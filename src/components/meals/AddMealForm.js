@@ -31,8 +31,6 @@ export class AddMealForm extends React.Component {
 
     onChange(event) {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(event.target.name);
-    console.log(event.target.value);
     }
 
   componentDidMount() {

@@ -39,7 +39,6 @@ export class AdminSignupForm extends React.Component{
 
     onSubmit(event){
         event.preventDefault();
-        console.log(JSON.stringify(this.state));
         this.props.adminSignupRequest(this.state)
         .then(response => {
             if(response.signedUp){

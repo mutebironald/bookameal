@@ -30,38 +30,7 @@ describe("Add Menu component", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    // it("manipulates array to get menu object", () => {
-        // const setDate = wrapper.instance().state();
-        // wrapper.setState({ currentMenu: { day: today,  meals: [{ id: 1, meal_name: "test", price: 1000 }] }});
 
 
-        // wrapper.instance().state("currentMenu") = {day: today,  meals: [{ id: 1, meal_name: "test", price: 1000 }] }
-
-
-        // expect(wrapper.state("currentMenu")).toEqual(data[0]);
-
-        // const today = getCurrentDay();
-        // const instance = wrapper.instance()
-        // wrapper.setProps({ currentMenu: { day: today,  meals: [{ id: 1, meal_name: "test", price: 1000 }] }})
-        // instance.getMenu(today)
-        // // wrapper.instance().setState({ currentMenu: { day: today,  meals: [{ id: 1, meal_name: "test", price: 1000 }] }});
-        // console.log("++++++++++++++++++++++++++")
-        // console.log(wrapper.state())
-        // console.log(data, "menus", menus)
-        // wrapper.instance().getMenu(today);
-        // const { currentMenu } = wrapper.instance().state;
-        // expect(currentMenu).toEqual(data[0]);
-    //   });
-
-
-    // it("manipulates array to get menu object", () => {
-    //     const today = getCurrentDay();
-    //     wrapper.instance().setState({ Menu: data });
-    //     console.log(wrapper.state)
-    //     // console.log("-------------7695[[[[[[[[[[[",data[0]["meals"], wrapper.state.meals)
-    //     wrapper.instance().getMenu(today);
-    //     const { currentMenu } = wrapper.instance().state;
-    //     expect(currentMenu).toEqual(data[0]);
-    //   });
 
 })
