@@ -14,4 +14,13 @@ describe("Get all customer orders", () => {
     });
 
 
+    it("should toggle", () => {
+        const  {
+            modal
+        } = wrapper.instance().state
+        wrapper.instance().toggle()
+        expect(wrapper.instance().state.modal).toEqual(false)
+    })
+
+
 })

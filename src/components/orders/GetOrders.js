@@ -20,7 +20,7 @@ class GetOrders extends React.Component {
 
     componentDidMount(){
         fetch('/api/v1/orders')
-        .then(response => response.json())
+        .then(response => response)
         .then(resData => {
 
             let meals = resData

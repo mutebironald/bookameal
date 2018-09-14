@@ -1,5 +1,14 @@
 import React from 'react';
 import UserMenu from '../../components/menus/UserMenu';
+import getCurrentDay from '../../components/current'
+
+function setup(){
+    const props = {
+        menu: {menu: [{id: 1, meals: {name: 'test'}}]}
+    }
+    
+    return shallow(<UserMenu {...props} />);
+}
 
 describe("User Menu Component", () => {
     let wrapper;
@@ -35,6 +44,7 @@ describe("User Menu Component", () => {
         expect(wrapper.instance().state.id.id).toBe(2)
 
     });
+
 
 
 })

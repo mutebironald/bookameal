@@ -2,7 +2,7 @@ import React from 'react';
 import thunk from "redux-thunk";
 import configureMockStore from "redux-mock-store";
 import MockAdapter from 'axios-mock-adapter';
-import userSignUpRequest from '../../actions/userSignUpRequest';
+import userSignupRequest from '../../actions/userSignupRequest';
 import axiosInstance from '../../actions/instance';
 
 const middlewares = [thunk];
@@ -19,7 +19,7 @@ describe("sign a user in", () => {
         const expectedAction = [
             {type: "SIGNUP_USER", payload: data}
         ]
-        return store.dispatch(userSignUpRequest (data)).then(() => {
+        return store.dispatch(userSignupRequest (data)).then(() => {
           expect(store.getActions()).toEqual(expectedAction);
         });
     })

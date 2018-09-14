@@ -2,7 +2,7 @@ import React from 'react';
 import thunk from "redux-thunk";
 import configureMockStore from "redux-mock-store";
 import MockAdapter from 'axios-mock-adapter';
-import adminSignUpRequest from '../../actions/adminSignUpRequest';
+import  adminSignUpRequest  from '../../actions/adminSignUpRequest';
 import axiosInstance from '../../actions/instance';
 
 const middlewares = [thunk];

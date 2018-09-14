@@ -55,7 +55,7 @@ export class AdminMenu extends React.Component {
     componentDidMount() {
         this.getMenus();
       }  
-
+    
     toggle(){
         this.setState({
             modal: !this.state.modal,
@@ -64,6 +64,7 @@ export class AdminMenu extends React.Component {
 
     returnMenu = () =>{
         const  currentMenu = this.state.currentMenu;
+        console.log("currentMenu",this.state.currentMenu)
 
         if(currentMenu.meals.length === undefined){
             return (
@@ -79,6 +80,7 @@ export class AdminMenu extends React.Component {
                 </Modal>
                 </div>
             );
+            
         }else {
            return (
                <Col>

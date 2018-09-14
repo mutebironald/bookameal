@@ -93,12 +93,10 @@ export class LoginForm extends React.Component {
         .then(response => {
             if(response.loggedIn){
                 if(response.admin === "True"){
-                    console.log("we are here")
                     toastr.success(response.message)
                     this.props.history.push('/getMeals')
                 }
                 else{
-                    console.log("Come on people", response.admin)
                     toastr.success(response.message)
                     this.props.history.push('/UserMenu')
 
