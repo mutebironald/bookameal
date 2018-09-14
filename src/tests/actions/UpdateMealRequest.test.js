@@ -1,7 +1,7 @@
 import thunk from "redux-thunk";
 import configureMockStore from "redux-mock-store";
 import MockAdapter from 'axios-mock-adapter';
-import UpdateMealRequest from '../../actions/UpdateMealRequest';
+import UpdateMealRequest from '../../actions/updateMealRequest';
 import axiosInstance from '../../actions/instance';
 
 const middlewares = [thunk];
