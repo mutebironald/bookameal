@@ -22,7 +22,7 @@ export class AdminOrders extends React.Component {
         };
 
     componentDidMount(){
-        instance.get('/api/v1/orders')
+        instance.get('/api/v1/orders', {headers:{"Authorization": localStorage.getItem('Authorization')}})
         .then(res => {
             let meals = res.data
            this.setState({ orderMeals: meals });
