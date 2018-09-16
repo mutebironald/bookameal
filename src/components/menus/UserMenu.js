@@ -50,7 +50,7 @@ class UserMenu extends React.Component {
           { key: 4, name: "Thursday" },
           { key: 5, name: "Friday" },
           { key: 6, name: "Saturday" },
-          { key: 7, name: "Sunday" }
+          { key: 0, name: "Sunday" }
         ];
         const today = days.find(day => day.key === numberDay);
         return today.name;
