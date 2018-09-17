@@ -129,7 +129,7 @@ export class SignupForm extends React.Component {
                 </div>
 
                 <div className="form-group">
-                    <button className="btn btn-primary btn-success" disabled={!this.state.formValid}>
+                    <button className="btn btn-primary btn-success" >
                         Signup
                     </button>
                 </div>
