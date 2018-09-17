@@ -84,7 +84,7 @@ class GetMeals extends Component {
     const id = this.state.id;
     const url = `/api/v1/meals/${id}`
     instance
-      .delete(url)
+      .delete(url,{headers:{"Authorization": localStorage.getItem('Authorization')}})
       .then(response => {
         return response.data;
       })
