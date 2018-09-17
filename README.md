@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/mutebironald4/bookameal/badge.svg?branch=develop&service=github)](https://coveralls.io/github/mutebironald4/bookameal?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/mutebironald4/bookameal/badge.svg?branch=develop)](https://coveralls.io/github/mutebironald4/bookameal?branch=develop)
 [![Build Status](https://travis-ci.org/mutebironald4/bookameal.svg?branch=develop)](https://travis-ci.org/mutebironald4/bookameal)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e41502dc4968e2bff8ab/maintainability)](https://codeclimate.com/github/mutebironald4/bookameal/maintainability)
 
