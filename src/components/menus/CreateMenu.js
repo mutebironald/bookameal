@@ -24,8 +24,9 @@ export class CreateMenu extends React.Component {
 
     onSubmit(event){
         event.preventDefault();
+        // console.log(this.state, "the thingly state")
         if (this.state.meal_id.trim()){
-            this.props.addMenuRequest((this.state));
+            this.props.addMenuRequest(this.state);
             this.setState({meal_id:'', day: ''})
         }
     }
