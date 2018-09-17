@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import "../.././App.css"
 
-import { addMenuRequest } from '../../actions/addMenuRequest';
+import   addMenuRequest   from '../../actions/addMenuRequest';
 
 
 export class CreateMenu extends React.Component {
@@ -24,11 +24,11 @@ export class CreateMenu extends React.Component {
 
     onSubmit(event){
         event.preventDefault();
-        // console.log(this.state, "the thingly state")
         if (this.state.meal_id.trim()){
             this.props.addMenuRequest(this.state);
             this.setState({meal_id:'', day: ''})
         }
+        console.log(this.state, "here is your state")
     }
     render(){
         return (
