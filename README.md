@@ -37,11 +37,11 @@ Tools used for development of this client are;
 - Install the required dependencies.
 ```sh
 > cd bookameal
-> npm install
+> yarn install
 ```
 - Run the application.
 ```sh
-> npm start
+> yarn start
 ```
 - Enter http://localhost:3000 in your browser to interact with your local version of your application.
 
